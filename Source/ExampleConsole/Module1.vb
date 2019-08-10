@@ -1,11 +1,15 @@
 ﻿Module Module1
 
 	Sub Main()
-		' do something here
+		Dim counter = 2
+		Dim outputString
+		Dim currentChar = "-"c
+		Do
+			counter = counter + 1
+			outputString = New String(currentChar, counter)
+			Console.WriteLine(outputString)
+			Threading.Thread.Sleep(120)
+		Loop While True
 
-		' Wait for user entry, 
-		' a crude way to stop the program ending before we can see the results
-		Console.ReadLine()
 	End Sub
-
 End Module
