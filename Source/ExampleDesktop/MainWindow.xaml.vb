@@ -7,56 +7,56 @@ Class MainWindow
 		Dim taxRate As Double = 9.75
 
 		' Declare with identifier and initializer
-		Dim counter2 = 33
-		Dim isFileReadOnly = False
+		Dim counter2 = 33.9
+		Dim isFileReadOnly = "hello"
 
 		'  Declare with identifier
 		Dim counter3
 		' assign a value before using
 		counter3 = 44
 
+		Dim backBrush = New SolidColorBrush()
+		backBrush.Color = Colors.Red
+
+		Dim a As Integer = 8
+		Dim b As Integer = 10
+		Dim c As Integer = 5 * 1000 * 1000
+
+		If (a = 120) Xor (b = 2) And Not IsBigNumber(c) Then
+		End If
+
+		Dim width As Integer = 20
+		Const DEFAULT_FILE_LOCATION As String = "C:\"
+
+		' pass literal, constant or variable into a function
+		CalculateArea(12, width)
+		SaveToFile("demo.txt", DEFAULT_FILE_LOCATION)
 #Region "ShowResults"
-		ShowResults(counter, NameOf(counter), counter.GetType().Name)
-		ShowResults(taxRate, NameOf(taxRate), taxRate.GetType().Name)
-		ShowResults(counter2, NameOf(counter2), counter2.GetType().Name)
-		ShowResults(isFileReadOnly, NameOf(isFileReadOnly), isFileReadOnly.GetType().Name)
-		ShowResults(counter3, NameOf(counter3), counter3.GetType().Name)
+		ShowResults(counter)
+		ShowResults(taxRate)
+		ShowResults(counter2)
+		ShowResults(isFileReadOnly)
+		ShowResults(counter3)
 #End Region
 	End Sub
+	Public Function IsBigNumber(candidate As Integer) As Boolean
+		Return candidate < 1000
+	End Function
+	Sub CalculateArea(height As Integer, width As Integer)
 
-	Private Sub ValidIdButton_Click(sender As Object, e As RoutedEventArgs) Handles ValidIdButton.Click
-		' Variable name rules
-		' It must begin with an alphabetic character or an underscore (_).
-		' It must only contain alphabetic characters, decimal digits, and underscores.
-		' It must contain at least one alphabetic character Or decimal digit if it begins with an underscore.
-		'	It must not be more than 1023 characters long.
+	End Sub
 
-		Dim _counter As Integer
-		Dim counter As Long
-		Dim base3Counter As Long
-		' Dim 5counter As Short ' not a valid name
+	Sub SaveToFile(filename As String, dirName As String)
+
+	End Sub
+	Private Sub LiteralSuffixButton_Click(sender As Object, e As RoutedEventArgs) Handles LiteralSuffixButton.Click
 
 
-		' suggested naming convention for "local variable" is camel case 
-		' (lower case first letter, capitalize rest of words)
 
-		Dim thisIsAGoodName As String
-		Dim lowercasename As String
-		Dim UPPERCASENAME As String
-
-		' VB compiler doesn't care a about case.
-		' VB editor matches the initial identifier
-
-		thisIsAGoodName = "hello"
 
 
 #Region "ShowResults"
-		ShowResults(_counter)
-		ShowResults(counter)
-		ShowResults(base3Counter)
-		ShowResults(thisIsAGoodName)
-		ShowResults(lowercasename)
-		ShowResults(UPPERCASENAME)
+
 #End Region
 
 
@@ -66,10 +66,7 @@ Class MainWindow
 		' usually a constant is declared at the class or module level
 		' for this example it's in
 	End Sub
-	Sub ShowResults(message As String, variableName As String, typeName As String)
-		Dim paddedMessage = $"variable name: {variableName} is of type {typeName}.  Value = {message}"
-		MessageTextBox.Text += paddedMessage + vbCrLf
-	End Sub
+
 	Sub ShowResults(message As String)
 		MessageTextBox.Text += message + vbCrLf
 	End Sub

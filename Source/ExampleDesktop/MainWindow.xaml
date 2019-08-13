@@ -21,8 +21,8 @@
 							VerticalAlignment="Top"
 							Width="145"
 							Margin="20" />
-			<Button x:Name="ValidIdButton"
-							Content="Identifiers"
+			<Button x:Name="LiteralSuffixButton"
+							Content="Literal suffixes"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"
 							Width="145"
