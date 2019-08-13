@@ -1,7 +1,7 @@
 ﻿Imports System.Runtime.CompilerServices
 
 Class MainWindow
-	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles GoButton.Click
+	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
 		' Declare with identifier, type and initializer 
 		Dim counter As Integer = 22
 		Dim taxRate As Double = 9.75
@@ -18,16 +18,16 @@ Class MainWindow
 		' declare any .NET with the new keyword
 		Dim backBrush = New SolidColorBrush() ' see color button for example
 
-#Region "ShowResults"
-		ShowResults(counter, NameOf(counter), counter.GetType().Name)
-		ShowResults(taxRate, NameOf(taxRate), taxRate.GetType().Name)
-		ShowResults(counter2, NameOf(counter2), counter2.GetType().Name)
-		ShowResults(isFileReadOnly, NameOf(isFileReadOnly), isFileReadOnly.GetType().Name)
-		ShowResults(counter3, NameOf(counter3), counter3.GetType().Name)
+#Region "Output"
+		OutputToScreen(counter, NameOf(counter), counter.GetType().Name)
+		OutputToScreen(taxRate, NameOf(taxRate), taxRate.GetType().Name)
+		OutputToScreen(counter2, NameOf(counter2), counter2.GetType().Name)
+		OutputToScreen(isFileReadOnly, NameOf(isFileReadOnly), isFileReadOnly.GetType().Name)
+		OutputToScreen(counter3, NameOf(counter3), counter3.GetType().Name)
 #End Region
 	End Sub
 
-	Private Sub ValidIdButton_Click(sender As Object, e As RoutedEventArgs) Handles ValidIdButton.Click
+	Private Sub ValidIdButton_Click(sender As Object, e As RoutedEventArgs) Handles RunCode2Button.Click
 		' Variable name rules
 		' It must begin with an alphabetic character or an underscore (_).
 		' It must only contain alphabetic characters, decimal digits, and underscores.
@@ -53,13 +53,13 @@ Class MainWindow
 		thisIsAGoodName = "hello"
 
 
-#Region "ShowResults"
-		ShowResults(_counter)
-		ShowResults(counter)
-		ShowResults(base3Counter)
-		ShowResults(thisIsAGoodName)
-		ShowResults(lowercasename)
-		ShowResults(UPPERCASENAME)
+#Region "Output"
+		OutputToScreen(_counter)
+		OutputToScreen(counter)
+		OutputToScreen(base3Counter)
+		OutputToScreen(thisIsAGoodName)
+		OutputToScreen(lowercasename)
+		OutputToScreen(UPPERCASENAME)
 #End Region
 
 
@@ -67,16 +67,16 @@ Class MainWindow
 
 
 
-	Private Sub ChangeColorButton_Click(sender As Object, e As RoutedEventArgs) Handles ChangeColorButton.Click
+	Private Sub ChangeColorButton_Click(sender As Object, e As RoutedEventArgs) Handles RunCode3Button.Click
 		Dim backBrush As New SolidColorBrush
 		backBrush.Color = Colors.Orange
 		MainPanel.Background = backBrush
 	End Sub
-	Sub ShowResults(message As String, variableName As String, typeName As String)
+	Sub OutputToScreen(message As String, variableName As String, typeName As String)
 		Dim paddedMessage = $"variable name: {variableName} is of type {typeName}.  Value = {message}"
 		MessageTextBox.Text += paddedMessage + vbCrLf
 	End Sub
-	Sub ShowResults(message As String)
+	Sub OutputToScreen(message As String)
 		MessageTextBox.Text += message + vbCrLf
 	End Sub
 
