@@ -1,86 +1,38 @@
 ﻿Imports System.Runtime.CompilerServices
 
 Class MainWindow
-	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles GoButton.Click
-		' Declare with identifier, type and initializer 
-		Dim counter As Integer = 22
-		Dim taxRate As Double = 9.75
+	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles ConstantButton.Click
+		' constants are usually declared at the module or class level
 
-		' Declare with identifier and initializer
-		Dim counter2 = 33.9
-		Dim isFileReadOnly = "hello"
+		Const Pi As Decimal = 3.1415926535897931
+		Const HALF_BYTE As Byte = 127
 
-		'  Declare with identifier
-		Dim counter3
-		' assign a value before using
-		counter3 = 44
-
-		Dim backBrush = New SolidColorBrush()
-		backBrush.Color = Colors.Red
-
-		Dim a As Integer = 8
-		Dim b As Integer = 10
-		Dim c As Integer = 5 * 1000 * 1000
-
-		If (a = 120) Xor (b = 2) And Not IsBigNumber(c) Then
-		End If
-
-		Dim width As Integer = 20
-		Const DEFAULT_FILE_LOCATION As String = "C:\"
-
-		' pass literal, constant or variable into a function
-		CalculateArea(12, width)
-		SaveToFile("demo.txt", DEFAULT_FILE_LOCATION)
-#Region "ShowResults"
-		ShowResults(counter)
-		ShowResults(taxRate)
-		ShowResults(counter2)
-		ShowResults(isFileReadOnly)
-		ShowResults(counter3)
-#End Region
-	End Sub
-	Public Function IsBigNumber(candidate As Integer) As Boolean
-		Return candidate < 1000
-	End Function
-	Sub CalculateArea(height As Integer, width As Integer)
-
+		Dim circumference As Double
+		Dim diameter As Double = 4
+		circumference = Pi * diameter
+		ShowResults(circumference)
+		ShowResults(HALF_BYTE)
 	End Sub
 
-	Sub SaveToFile(filename As String, dirName As String)
+	Private Sub BuiltInButton_Click(sender As Object, e As RoutedEventArgs) Handles BuiltInButton.Click
 
-	End Sub
-	Private Sub LiteralSuffixButton_Click(sender As Object, e As RoutedEventArgs) Handles LiteralSuffixButton.Click
+		' Constants are members of some .NET classes.
 
-		Dim anything = 5
+		Dim circumference As Double
+		Dim diameter As Double = 4
+		circumference = Math.PI * diameter
 
-		' use appended character to change literal type
-		' Decimal: D or @
-		' Double: R or #
-		' Integer: I or %
-		' Long: L or &
-		' Short: S
-		' Single: F or !
-		' Char: C
+		' VB language has some constants that start with vb_
 
-		' use enclosing character
-		' String: ""
-		' Date: ##
+		Dim message1, message2 As String
+		message1 = "Hello" + vbCrLf + "again."
+		ShowResults(message1)
+		message2 = "which type of conversion to perform when calling the StrConv function."
 
-		' read more about data types here
-		' https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/data-types/index
-
-
-#Region "ShowResults"
-
-#End Region
-
-
+		message2 = StrConv(message2, VbStrConv.ProperCase)
+		ShowResults(message2)
 	End Sub
 
-	Private Sub ConstantsButton_Click(sender As Object, e As RoutedEventArgs) Handles ConstantsButton.Click
-		' usually a constant is declared at the class or module level
-		' for this example it's in
-	End Sub
 
 	Sub ShowResults(message As String)
 		MessageTextBox.Text += message + vbCrLf

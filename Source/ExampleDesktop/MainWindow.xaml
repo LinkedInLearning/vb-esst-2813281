@@ -15,23 +15,25 @@
 		<StackPanel Orientation="Horizontal"
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
-			<Button x:Name="GoButton"
-							Content="Go!"
+			<Button x:Name="ConstantButton"
+							Content="Custom"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"
-							Width="145"
-							Margin="20" />
-			<Button x:Name="LiteralSuffixButton"
-							Content="Literal suffixes"
+							MinWidth="145"
+							Margin="20"
+							Padding='6' />
+			<Button x:Name="BuiltInButton"
+							Content="Built-in Constants"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"
-							Width="145"
-							Margin="20" />
+							MinWidth="145"
+							Margin="20"
+							Padding='6' />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"
-							Width="145"
+							MinWidth="145" Padding='6'
 							Margin="20" />
 		</StackPanel>
 		<TextBox x:Name="MessageTextBox"
