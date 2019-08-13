@@ -15,6 +15,9 @@ Class MainWindow
 		' assign a value before using
 		counter3 = 44
 
+		' declare any .NET with the new keyword
+		Dim backBrush = New SolidColorBrush() ' see color button for example
+
 #Region "ShowResults"
 		ShowResults(counter, NameOf(counter), counter.GetType().Name)
 		ShowResults(taxRate, NameOf(taxRate), taxRate.GetType().Name)
@@ -62,9 +65,12 @@ Class MainWindow
 
 	End Sub
 
-	Private Sub ConstantsButton_Click(sender As Object, e As RoutedEventArgs) Handles ConstantsButton.Click
-		' usually a constant is declared at the class or module level
-		' for this example it's in
+
+
+	Private Sub ChangeColorButton_Click(sender As Object, e As RoutedEventArgs) Handles ChangeColorButton.Click
+		Dim backBrush As New SolidColorBrush
+		backBrush.Color = Colors.Orange
+		MainPanel.Background = backBrush
 	End Sub
 	Sub ShowResults(message As String, variableName As String, typeName As String)
 		Dim paddedMessage = $"variable name: {variableName} is of type {typeName}.  Value = {message}"

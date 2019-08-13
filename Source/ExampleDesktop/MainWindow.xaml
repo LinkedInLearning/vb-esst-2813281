@@ -9,7 +9,8 @@
 				Height="450"
 				Width="800"
 				FontSize="20">
-	<DockPanel Background="#FFECF7FF"
+	<DockPanel x:Name='MainPanel'
+						 Background="#FFECF7FF"
 						 LastChildFill="True">
 
 		<StackPanel Orientation="Horizontal"
@@ -23,6 +24,12 @@
 							Margin="20" />
 			<Button x:Name="ValidIdButton"
 							Content="Identifiers"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Top"
+							Width="145"
+							Margin="20" />
+			<Button x:Name="ChangeColorButton"
+							Content="Change Color"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"
 							Width="145"
