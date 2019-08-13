@@ -5,7 +5,7 @@
 		ShowResults(counter)
 	End Sub
 	Sub ShowResults(message As string)
-		MessageTextBox.Text = message + vbCrLf
+		MessageTextBox.Text += message + vbCrLf
 	End Sub
 
 	Private Sub Clear(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click

@@ -5,11 +5,11 @@
 				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 				xmlns:local="clr-namespace:ExampleDesktop"
 				mc:Ignorable="d"
-				Title="MainWindow"
+				Title="Code Explorer"
 				Height="450"
 				Width="800"
 				FontSize="20">
-	<DockPanel Background="#FFFFFFEC"
+	<DockPanel Background="#FFECF7FF"
 						 LastChildFill="True">
 
 		<StackPanel Orientation="Horizontal"
