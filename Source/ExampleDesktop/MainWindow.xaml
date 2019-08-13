@@ -15,13 +15,13 @@
 		<StackPanel Orientation="Horizontal"
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
-			<Button x:Name="GoButton"
+			<Button x:Name="RunCodeButton"
 							Content="Go!"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"
 							Width="145"
 							Margin="20" />
-			<Button x:Name="LiteralSuffixButton"
+			<Button x:Name="RunCode2Button"
 							Content="Literal suffixes"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"

@@ -1,7 +1,7 @@
 ﻿Imports System.Runtime.CompilerServices
 
 Class MainWindow
-	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles GoButton.Click
+	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
 		' Declare with identifier, type and initializer 
 		Dim counter As Integer = 22
 		Dim taxRate As Double = 9.75
@@ -32,11 +32,11 @@ Class MainWindow
 		CalculateArea(12, width)
 		SaveToFile("demo.txt", DEFAULT_FILE_LOCATION)
 #Region "ShowResults"
-		ShowResults(counter)
-		ShowResults(taxRate)
-		ShowResults(counter2)
-		ShowResults(isFileReadOnly)
-		ShowResults(counter3)
+		OutputToScreen(counter)
+		OutputToScreen(taxRate)
+		OutputToScreen(counter2)
+		OutputToScreen(isFileReadOnly)
+		OutputToScreen(counter3)
 #End Region
 	End Sub
 	Public Function IsBigNumber(candidate As Integer) As Boolean
@@ -49,7 +49,7 @@ Class MainWindow
 	Sub SaveToFile(filename As String, dirName As String)
 
 	End Sub
-	Private Sub LiteralSuffixButton_Click(sender As Object, e As RoutedEventArgs) Handles LiteralSuffixButton.Click
+	Private Sub LiteralSuffixButton_Click(sender As Object, e As RoutedEventArgs) Handles RunCode2Button.Click
 
 		Dim anything = 5
 
@@ -77,12 +77,9 @@ Class MainWindow
 
 	End Sub
 
-	Private Sub ConstantsButton_Click(sender As Object, e As RoutedEventArgs) Handles ConstantsButton.Click
-		' usually a constant is declared at the class or module level
-		' for this example it's in
-	End Sub
 
-	Sub ShowResults(message As String)
+
+	Sub OutputToScreen(message As String)
 		MessageTextBox.Text += message + vbCrLf
 	End Sub
 
