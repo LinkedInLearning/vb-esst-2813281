@@ -51,7 +51,7 @@ Class MainWindow
 	End Sub
 	Private Sub LiteralSuffixButton_Click(sender As Object, e As RoutedEventArgs) Handles LiteralSuffixButton.Click
 
-		Dim anything = 5L
+		Dim anything = 5
 
 		' use appended character to change literal type
 		' Decimal: D or @
@@ -60,6 +60,12 @@ Class MainWindow
 		' Long: L or &
 		' Short: S
 		' Single: F or !
+		' Char: C
+
+		' use enclosing character
+		' String: ""
+		' Date: ##
+
 		' read more about data types here
 		' https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/data-types/index
 
