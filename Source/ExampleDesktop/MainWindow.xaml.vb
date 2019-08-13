@@ -19,13 +19,13 @@ Class MainWindow
 		If counter > 10 Then
 			Dim message As String = "block scope"
 			' message is block scope, only visible in this if block
-			ShowResults(message)
+			OutputToScreen(message)
 
 		End If
 		If counter > 20 Then
 			Dim message As String = "block scope"
 			' message is block scope, only visible in this if block
-			ShowResults(message)
+			OutputToScreen(message)
 		End If
 		' what about this variable?
 		'	message = "Cannot access this variable"
@@ -43,7 +43,7 @@ Class MainWindow
 		MessageTextBox.Background = _accentBrush
 	End Sub
 
-	Sub ShowResults(message As String)
+	Sub OutputToScreen(message As String)
 		MessageTextBox.Text += message + vbCrLf
 	End Sub
 
