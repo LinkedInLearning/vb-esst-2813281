@@ -15,14 +15,14 @@
 		<StackPanel Orientation="Horizontal"
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
-			<Button x:Name="ConstantButton"
+			<Button x:Name="RunCodeButton"
 							Content="Custom"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"
 							MinWidth="145"
 							Margin="20"
 							Padding='6' />
-			<Button x:Name="BuiltInButton"
+			<Button x:Name="RunCode2Button"
 							Content="Built-in Constants"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"
