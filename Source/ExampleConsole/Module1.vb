@@ -1,10 +1,17 @@
-﻿Module Module1
+﻿Imports System.IO
+
+Module Module1
 
 	Sub Main()
-		' do something here
 
-		' Wait for user entry, 
-		' a crude way to stop the program ending before we can see the results
+		Dim folderName As String = "C:\VbTemp"
+		Dim files As String()
+		files = Directory.GetFiles(folderName)
+
+		For Each file In files
+			Console.WriteLine(file)
+		Next
+
 		Console.ReadLine()
 	End Sub
 
