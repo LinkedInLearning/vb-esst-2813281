@@ -1,11 +1,18 @@
 ﻿Imports System.Runtime.CompilerServices
 
 Class MainWindow
+	' class level scope, variable is visible to all code in class
+	' in OOP this is also considered a Field (a member of the class type)
+
+	Private primaryBrush As New SolidColorBrush
+	Private _accentBrush As New SolidColorBrush ' naming convention preferred by some OOP programmers
+
+
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
 		' variable have scope and lifetime
 		' scope determines its visibility to other code
 
-		Dim counter As Integer = 1
+		Dim counter As Integer = 15
 
 		' counter is local variable, can access within this method
 
@@ -26,10 +33,15 @@ Class MainWindow
 	End Sub
 
 	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles RunCode2Button.Click
-
+		primaryBrush.Color = Colors.Orange
+		MainPanel.Background = primaryBrush
 
 	End Sub
-
+	Private Sub RunCode3Button_Click(sender As Object, e As RoutedEventArgs) Handles RunCode3Button.Click
+		_accentBrush.Color = Colors.Purple
+		MessageTextBox.Foreground = primaryBrush
+		MessageTextBox.Background = _accentBrush
+	End Sub
 
 	Sub ShowResults(message As String)
 		MessageTextBox.Text += message + vbCrLf

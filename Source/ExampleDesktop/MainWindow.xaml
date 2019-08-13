@@ -9,7 +9,8 @@
 				Height="450"
 				Width="800"
 				FontSize="20">
-	<DockPanel Background="#FFECF7FF"
+	<DockPanel x:Name='MainPanel'
+						 Background="#FFECF7FF"
 						 LastChildFill="True">
 
 		<StackPanel Orientation="Horizontal"
@@ -24,6 +25,13 @@
 							Padding='6' />
 			<Button x:Name="RunCode2Button"
 							Content="Class scope"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Top"
+							MinWidth="145"
+							Margin="20"
+							Padding='6' />
+			<Button x:Name="RunCode3Button"
+							Content="Class scope 2"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"
 							MinWidth="145"
