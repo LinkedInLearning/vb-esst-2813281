@@ -5,18 +5,26 @@ Class MainWindow
 	' in OOP this is also considered a Field (a member of the class type)
 
 	Private primaryBrush As New SolidColorBrush
-	Private _accentBrush As New SolidColorBrush ' naming convention preferred by some OOP programmers
+
+	' underscore naming convention preferred by some OOP programmers
+	Private _accentBrush As New SolidColorBrush
+
 
 
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
 		' variable have scope and lifetime
+
 		' scope determines its visibility to other code
+		' variables in the same scope cannot have the same name
+
+		' lifetime is how long the memory location is kept available
 
 		Dim counter As Integer = 15
 
-		' counter is local variable, can access within this method
+		' counter is local variable, any code in this method can access 
 
 		If counter > 10 Then
+			counter += 1
 			Dim message As String = "block scope"
 			' message is block scope, only visible in this if block
 			OutputToScreen(message)
@@ -28,7 +36,7 @@ Class MainWindow
 			OutputToScreen(message)
 		End If
 		' what about this variable?
-		'	message = "Cannot access this variable"
+		' message = "Cannot access this variable"
 
 	End Sub
 
