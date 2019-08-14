@@ -20,6 +20,7 @@ Class MainWindow
 		' lifetime is how long the memory location is kept available
 
 		Dim counter As Integer = 15
+		'Dim counter As Long = 20
 
 		' counter is local variable, any code in this method can access 
 
@@ -36,7 +37,7 @@ Class MainWindow
 			OutputToScreen(message)
 		End If
 		' what about this variable?
-		' message = "Cannot access this variable"
+		'	message = "Cannot access this variable"
 
 	End Sub
 
