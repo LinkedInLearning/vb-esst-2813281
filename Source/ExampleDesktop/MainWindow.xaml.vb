@@ -17,7 +17,7 @@ Class MainWindow
 
 		' declare variable of any .NET type that has a constructor
 		'  use the New keyword
-
+		Dim simpleBrush As SolidColorBrush = New SolidColorBrush
 		Dim backBrush = New SolidColorBrush() ' see color button for example
 
 #Region "Output"
@@ -41,7 +41,7 @@ Class MainWindow
 		Dim base3Counter As Long
 		Dim widget_counter As Short
 
-		' Dim 5counter As Short ' not a valid name
+		'Dim 5counter As Short ' not a valid name
 
 
 		' suggested naming convention for "local variable" is camel case 
