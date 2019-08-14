@@ -15,7 +15,9 @@ Class MainWindow
 		' assign a value before using
 		counter3 = 44
 
-		' declare any .NET with the new keyword
+		' declare variable of any .NET type that has a constructor
+		'  use the New keyword
+
 		Dim backBrush = New SolidColorBrush() ' see color button for example
 
 #Region "Output"
@@ -37,6 +39,8 @@ Class MainWindow
 		Dim _counter As Integer
 		Dim counter As Long
 		Dim base3Counter As Long
+		Dim widget_counter As Short
+
 		' Dim 5counter As Short ' not a valid name
 
 
@@ -47,16 +51,17 @@ Class MainWindow
 		Dim lowercasename As String
 		Dim UPPERCASENAME As String
 
-		' VB compiler doesn't care a about case.
+		' VB compiler doesn't care about case.
 		' VB editor matches the initial identifier
 
 		thisIsAGoodName = "hello"
-
+		lowercasename = "David"
 
 #Region "Output"
 		OutputToScreen(_counter)
 		OutputToScreen(counter)
 		OutputToScreen(base3Counter)
+		OutputToScreen(widget_counter)
 		OutputToScreen(thisIsAGoodName)
 		OutputToScreen(lowercasename)
 		OutputToScreen(UPPERCASENAME)
