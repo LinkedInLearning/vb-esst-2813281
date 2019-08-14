@@ -1,6 +1,7 @@
 ﻿Imports System.Runtime.CompilerServices
 
 Class MainWindow
+
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
 		' constants are usually declared at the module or class level
 
@@ -22,14 +23,15 @@ Class MainWindow
 		Dim diameter As Double = 4
 		circumference = Math.PI * diameter
 
+
 		' VB language has some constants that start with vb_
 
 		Dim message1, message2 As String
 		message1 = "Hello" + vbCrLf + "again."
 		OutputToScreen(message1)
-		message2 = "which type of conversion to perform when calling the StrConv function."
+		message2 = "indicate what conversion option to use with StrConv function."
 
-		message2 = StrConv(message2, VbStrConv.ProperCase)
+		message2 = StrConv(message2, VbStrConv.Uppercase)
 		OutputToScreen(message2)
 	End Sub
 
