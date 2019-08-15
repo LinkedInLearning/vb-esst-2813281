@@ -6,20 +6,10 @@ Class MainWindow
 		Dim myInteger As Integer = Integer.MaxValue
 		Dim myLong As Long = Long.MaxValue
 
-		Dim targetInteger As Integer
-		Dim targetLong As Long
+		'Dim targetInteger As Integer
+		'Dim targetLong As Long
 
-		targetLong = myInteger
-		OutputToScreen(targetLong)
 
-		Try
-			targetInteger = myLong
-		Catch ex As Exception
-
-			OutputToScreen(ex.Message)
-		End Try
-
-		OutputToScreen(targetInteger)
 
 
 	End Sub
@@ -32,16 +22,12 @@ Class MainWindow
 		Dim targetLong As Long
 
 		' add explicit conversion to long
-		targetLong = CLng(myInteger) ' widening
-		targetLong = Convert.ToInt64(myInteger)
+
 
 		OutputToScreen(targetLong)
 
 		' add explicit conversion to integer
-		If myLong < Integer.MaxValue And myLong > Integer.MinValue Then
-			targetInteger = CInt(600) ' narrowing
-			targetInteger = Convert.ToInt32(myLong) ' narrowing
-		End If
+
 
 		OutputToScreen(targetInteger)
 
