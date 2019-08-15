@@ -5,49 +5,47 @@ Class MainWindow
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
 		Dim myInteger As Integer = 43218765
 		Dim myLong As Long = 9988776655
-		
 
 		OutputToScreen("--No format--")
-	' code here
+		' code here
 
 		OutputBlankLine()
-
 		OutputToScreen("--Number------")
 		' code here
-		OutputBlankLine()
 
+		OutputBlankLine()
 		OutputToScreen("--Exponent-------")
 		' code here
-		OutputBlankLine()
 
+		OutputBlankLine()
 		OutputToScreen("--Currency--------")
 		' code here
 
-		OutputBlankLine
+		OutputBlankLine()
 
-		
-	
+
+
 		OutputToScreen("--Hexadecimal--------")
 		' code here
 
 
-		#Region "Learn More"
+#Region "Learn More"
 		' learn more about format strings
 		'	https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings
-		#End Region
+#End Region
 	End Sub
 
 	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles RunCode2Button.Click
-		
-		
+
+
 		OutputToScreen("--Date--------")
-	' code here
+		' code here
 
 
-			#Region "Learn More"
+#Region "Learn More"
 		' learn more about data format strings
 		' https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings
-		#End Region
+#End Region
 
 	End Sub
 
@@ -57,7 +55,7 @@ Class MainWindow
 		MessageTextBox.Text += message + vbCrLf
 	End Sub
 	Sub OutputBlankLine()
-		MessageTextBox.Text +=  vbCrLf
+		MessageTextBox.Text += vbCrLf
 	End Sub
 
 	Sub OutputFormattedToScreen(message As String, number As Object)
