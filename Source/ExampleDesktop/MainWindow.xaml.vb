@@ -31,9 +31,10 @@ Class MainWindow
 		' code here
 
 
-
+		#Region "Learn More"
 		' learn more about format strings
 		'	https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings
+		#End Region
 	End Sub
 
 	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles RunCode2Button.Click
@@ -43,9 +44,10 @@ Class MainWindow
 	' code here
 
 
-
+			#Region "Learn More"
 		' learn more about data format strings
 		' https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings
+		#End Region
 
 	End Sub
 
