@@ -3,43 +3,62 @@
 Class MainWindow
 
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
-		Dim myInteger As Integer = Integer.MaxValue
-		Dim myLong As Long = Long.MaxValue
+		Dim myInteger As Integer = 43218765
+		Dim myLong As Long = 9988776655
+		
 
-		'Dim targetInteger As Integer
-		'Dim targetLong As Long
+		OutputToScreen("--No format--")
+		OutputToScreen(myInteger)
+		OutputToScreen(myLong)
+		OutputBlankLine()
 
+		OutputToScreen("--Number------")
+		OutputToScreen(myInteger.ToString("N"))
+		OutputToScreen(myLong.ToString("N"))
+		OutputBlankLine()
 
+		OutputToScreen("--Exponent-------")
+		OutputToScreen(myInteger.ToString("E"))
+		OutputToScreen(myLong.ToString("E"))
+		OutputBlankLine()
 
+		OutputToScreen("--Currency--------")
+		OutputToScreen(myInteger.ToString("C"))
+		OutputToScreen(myLong.ToString("C"))
+		OutputBlankLine
+		Dim myByte As Byte = 127
+	
+		OutputToScreen("--Hexadecimal--------")
+		OutputToScreen(myByte)
+		OutputToScreen(myByte.ToString("X"))
+		
 
+		' learn more about format strings
+		'	https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings
 	End Sub
 
 	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles RunCode2Button.Click
-		Dim myInteger As Integer = Integer.MaxValue
-		Dim myLong As Long = Long.MaxValue
+		
+		Dim myDate As Date = #10/21/2025#
+		OutputToScreen("--Date--------")
+		OutputToScreen(myDate)
+		OutputToScreen(myDate.ToString("D"))
 
-		Dim targetInteger As Integer
-		Dim targetLong As Long
-
-		' add explicit conversion to long
-
-
-		OutputToScreen(targetLong)
-
-		' add explicit conversion to integer
-
-
-		OutputToScreen(targetInteger)
+		' learn more about data format strings
+		' https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings
 
 	End Sub
 
 	Private Sub RunCode3Button_Click(sender As Object, e As RoutedEventArgs) Handles RunCode3Button.Click
-		
+
 
 	End Sub
 
 	Sub OutputToScreen(message As String)
 		MessageTextBox.Text += message + vbCrLf
+	End Sub
+	Sub OutputBlankLine()
+		MessageTextBox.Text +=  vbCrLf
 	End Sub
 
 	Sub OutputFormattedToScreen(message As String, number As Object)

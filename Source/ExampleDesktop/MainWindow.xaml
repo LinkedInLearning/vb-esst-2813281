@@ -8,7 +8,8 @@
 				Title="Code Explorer"
 				Height="450"
 				Width="800"
-				FontSize="20" WindowState='Maximized'>
+				FontSize="20"
+				WindowState='Maximized'>
 	<DockPanel x:Name='MainPanel'
 						 Background="#FFECF7FF"
 						 LastChildFill="True">
@@ -17,21 +18,14 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="RunCodeButton"
-							Content="Implicit"
+							Content="ToString with Format"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"
 							MinWidth="145"
 							Margin="20"
 							Padding='6' />
 			<Button x:Name="RunCode2Button"
-							Content="Explicit"
-							HorizontalAlignment="Center"
-							VerticalAlignment="Top"
-							MinWidth="145"
-							Margin="20"
-							Padding='6' />
-			<Button x:Name="RunCode3Button"
-							Content="Data type - Ranges"
+							Content="Date Formats"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"
 							MinWidth="145"
@@ -41,7 +35,8 @@
 							Content="Clear"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"
-							MinWidth="145" Padding='6'
+							MinWidth="145"
+							Padding='6'
 							Margin="20" />
 		</StackPanel>
 		<TextBox x:Name="MessageTextBox"
