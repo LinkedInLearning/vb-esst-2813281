@@ -22,9 +22,6 @@ Class MainWindow
 		' code here
 
 		OutputBlankLine()
-
-
-
 		OutputToScreen("--Hexadecimal--------")
 		' code here
 
