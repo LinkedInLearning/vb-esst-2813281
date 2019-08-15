@@ -3,47 +3,47 @@
 Class MainWindow
 
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
-		Dim myInteger As Integer = 100
-		Dim myLong As Long = 200
+		Dim myInteger As Integer = Integer.MaxValue
+		Dim myLong As Long = Long.MaxValue
 
-		myLong = myInteger ' widening
-		OutputToScreen(myLong)
-		myInteger = Integer.MaxValue
+		Dim targetInteger As Integer
+		Dim targetLong As Long
 
-		myLong = myInteger ' widening
-		OutputToScreen(myLong)
-		myLong = Long.MaxValue
-		OutputToScreen(myLong)
+		targetLong = myInteger
+		OutputToScreen(targetLong)
+
 		Try
-			myInteger = myLong
+			targetInteger = myLong
 		Catch ex As Exception
+
 			OutputToScreen(ex.Message)
 		End Try
 
-#Region "Output"
+		OutputToScreen(targetInteger)
 
-		'OutputToScreen (myInteger)
-
-#End Region
 
 	End Sub
 
 	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles RunCode2Button.Click
-		Dim myInteger As Integer = 100
-		Dim myLong As Long = 200
+		Dim myInteger As Integer = Integer.MaxValue
+		Dim myLong As Long = Long.MaxValue
 
-		myLong = CLng(myInteger) ' widening
-		myLong = Convert.ToInt64(myInteger)
-		OutputToScreen(myLong)
+		Dim targetInteger As Integer
+		Dim targetLong As Long
 
-		myLong = Long.MaxValue
-	
+		' add explicit conversion to long
+		targetLong = CLng(myInteger) ' widening
+		targetLong = Convert.ToInt64(myInteger)
+
+		OutputToScreen(targetLong)
+
+		' add explicit conversion to integer
 		If myLong < Integer.MaxValue And myLong > Integer.MinValue Then
-			myInteger = CInt(myLong) ' narrowing
-			myInteger = Convert.ToInt32(myLong) ' narrowing
+			targetInteger = CInt(600) ' narrowing
+			targetInteger = Convert.ToInt32(myLong) ' narrowing
 		End If
 
-		OutputToScreen(myInteger)
+		OutputToScreen(targetInteger)
 
 	End Sub
 
