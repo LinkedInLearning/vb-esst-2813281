@@ -34,47 +34,7 @@ Class MainWindow
 	End Sub
 
 	Private Sub RunCode3Button_Click(sender As Object, e As RoutedEventArgs) Handles RunCode3Button.Click
-		' ranges of data types
-		OutputToScreen($"Byte Max: {Byte.MaxValue}")
-		OutputToScreen($"Byte Min: {Byte.MinValue}")
-		OutputLine()
-
-		OutputFormattedToScreen($"Short Max:", Short.MaxValue)
-		OutputFormattedToScreen($"Short Min:", Short.MinValue)
-		OutputLine()
-
-		OutputFormattedToScreen($"Integer Max:", Integer.MaxValue)
-		OutputFormattedToScreen($"Integer Min:", Integer.MinValue)
-		OutputLine()
-
-		OutputFormattedToScreen($"Long Max:", Long.MaxValue)
-		OutputFormattedToScreen($"Long Min:", Long.MinValue)
-		OutputLine()
-
-		OutputFormattedToScreen($"UShort Max:", UShort.MaxValue)
-		OutputToScreen($"UShort Min: {UShort.MinValue}")
-		OutputLine()
-
-		OutputFormattedToScreen($"UInteger Max:", UInteger.MaxValue)
-		OutputToScreen($"UInteger Min: {UInteger.MinValue}")
-		OutputLine()
-
-		OutputFormattedToScreen($"ULong Max:", ULong.MaxValue)
-		OutputToScreen($"ULong Min: {ULong.MinValue}")
-		OutputLine()
-		OutputToScreen($"Single Max: {Single.MaxValue}")
-		OutputToScreen($"Single Min: {Single.MinValue}")
-		'	OutputFormattedToScreen($"Single Max:", Single.MaxValue)
-		OutputLine()
-
-		OutputToScreen($"Double Max: {Double.MaxValue}")
-		OutputToScreen($"Double Min: {Double.MinValue}")
-		OutputLine()
-
-		OutputFormattedToScreen($"Decimal Max:", Decimal.MaxValue)
-		OutputFormattedToScreen($"Decimal Min:", Decimal.MinValue)
-
-		OutputLine()
+		
 
 	End Sub
 
