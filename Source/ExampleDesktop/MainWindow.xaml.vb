@@ -31,10 +31,13 @@ Class MainWindow
 		Dim targetInteger As Integer
 		Dim targetLong As Long
 
+		' add explicit conversion to long
 		targetLong = CLng(myInteger) ' widening
 		targetLong = Convert.ToInt64(myInteger)
+
 		OutputToScreen(targetLong)
 
+		' add explicit conversion to integer
 		If myLong < Integer.MaxValue And myLong > Integer.MinValue Then
 			targetInteger = CInt(600) ' narrowing
 			targetInteger = Convert.ToInt32(myLong) ' narrowing
