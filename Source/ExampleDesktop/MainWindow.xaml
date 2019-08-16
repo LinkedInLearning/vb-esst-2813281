@@ -6,10 +6,23 @@
 				xmlns:local="clr-namespace:ExampleDesktop"
 				mc:Ignorable="d"
 				Title="Code Explorer"
-				Height="450"
-				Width="800"
-				FontSize="20"
-			>
+				Height="650"
+				Width="1000"
+				FontSize="20" WindowState='Maximized'>
+	<Window.Resources>
+		<Style TargetType='Button'>
+			<Setter Property='Margin'
+							Value='20,10' />
+			<Setter Property='Padding'
+							Value='6' />
+			<Setter Property='MinWidth'
+							Value='145' />
+			<Setter Property='VerticalAlignment'
+							Value='Top' />
+			<Setter Property='HorizontalAlignment'
+							Value='Center' />
+		</Style>
+	</Window.Resources>
 	<DockPanel x:Name='MainPanel'
 						 Background="#FFECF7FF"
 						 LastChildFill="True">
@@ -17,41 +30,56 @@
 		<StackPanel Orientation="Horizontal"
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
-			<Button x:Name="RunCodeButton"
-							Content="Parse to Number"
-							HorizontalAlignment="Center"
-							VerticalAlignment="Top"
-							MinWidth="145"
-							Margin="20"
-							Padding='6' />
-			<Button x:Name="RunCode2Button"
-							Content="TryParse"
-							HorizontalAlignment="Center"
-							VerticalAlignment="Top"
-							MinWidth="145"
-							Margin="20"
-							Padding='6' />
+			<Button x:Name="ButtonE"
+							Content="Modify" />
+			<Button x:Name="ButtonF"
+							Content="Split" />
 			<Button x:Name="ClearButton"
-							Content="Clear"
-							HorizontalAlignment="Center"
-							VerticalAlignment="Top"
-							MinWidth="145"
-							Padding='6'
-							Margin="20" />
+							Content="Clear" />
+		</StackPanel>
+		<StackPanel Orientation="Horizontal"
+								DockPanel.Dock="Bottom"
+								HorizontalAlignment="Center">
+			<Button x:Name="ButtonA"
+							Content="Create String" />
+			<Button x:Name="ButtonB"
+							Content="Concatenate" />
+			<!--<Button x:Name="ButtonC"
+							Content="Chars" />-->
+			<Button x:Name="ButtonD"
+							Content="Search" />
 		</StackPanel>
 		<StackPanel Orientation='Horizontal'
 								DockPanel.Dock="Top"
 								HorizontalAlignment='Stretch'
 								Margin="40,5">
-			<TextBlock Text='Enter data:' />
-			<TextBox x:Name="InputTextBox"
+			<TextBlock Text='Enter Team A name:' />
+			<TextBox x:Name="TeamATextBox"
 							 HorizontalAlignment="Stretch"
-							MinWidth='400'
-							Margin='10,0'
-							 Text="1415"
-							 VerticalAlignment="Stretch"
-							
-							  />
+							 MinWidth='200'
+							 Margin='10,0'
+							 Text="Silver Sluggers"
+							 VerticalAlignment="Stretch" />
+			<TextBlock Text='Enter Team B name:' />
+			<TextBox x:Name="TeamBTextBox"
+							 HorizontalAlignment="Stretch"
+							 MinWidth='200'
+							 Margin='10,0'
+							 Text="Purple Aces"
+							 VerticalAlignment="Stretch" />
+		</StackPanel>
+		<StackPanel Orientation='Horizontal'
+								DockPanel.Dock="Top"
+								HorizontalAlignment='Stretch'
+								Margin="40,5">
+			<TextBlock Text='Search for word' />
+			<TextBox x:Name="SearchWordTextbox"
+							 HorizontalAlignment="Stretch"
+							 MinWidth='200'
+							 Margin='10,0'
+							 Text="skills"
+							 VerticalAlignment="Stretch" />
+			
 		</StackPanel>
 		<TextBox x:Name="MessageTextBox"
 						 HorizontalAlignment="Stretch"
