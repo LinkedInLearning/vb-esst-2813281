@@ -73,7 +73,7 @@ Class MainWindow
 	End Sub
 
 	Private Sub Split_click(sender As Object, e As RoutedEventArgs) Handles ButtonF.Click
-		Dim message = "Personalize your LinkedIn Learning experience with skills you're interested in."
+		Dim message = "Personalize your LinkedIn Learning experience with skills you need."
 		Dim words = message.Split(" "c)
 
 		For Each word In words
