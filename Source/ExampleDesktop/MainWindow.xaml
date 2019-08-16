@@ -8,11 +8,12 @@
 				Title="Code Explorer"
 				Height="700"
 				Width="900"
-				FontSize="20">
+				FontSize="20"
+				WindowState='Maximized'>
 	<Window.Resources>
 		<Style TargetType='Button'>
 			<Setter Property='Margin'
-							Value='20,10' />
+							Value='20,3' />
 			<Setter Property='Padding'
 							Value='6' />
 			<Setter Property='MinWidth'
@@ -26,20 +27,28 @@
 	<DockPanel x:Name='MainPanel'
 						 Background="#FFECF7FF"
 						 LastChildFill="True">
-
 		<StackPanel Orientation="Horizontal"
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Right"
 								Margin='40,5'>
-			<Button x:Name="ButtonA"
-							Content="Date Input" />
-			<Button x:Name="ButtonB"
-							Content="Formatting" />
 			<Button x:Name="ButtonC"
 							Content="Date Methods" />
 			<Button x:Name="ClearButton"
 							Content="Clear" />
 		</StackPanel>
+		<StackPanel Orientation="Horizontal"
+								DockPanel.Dock="Bottom"
+								HorizontalAlignment="Right"
+								Margin='40,5'>
+			<Button x:Name="ButtonA"
+							Content="Date variables" />
+			<Button x:Name="ButtonD"
+							Content="Time variables" />
+			<Button x:Name="ButtonB"
+							Content="Formatting" />
+
+		</StackPanel>
+
 		<StackPanel Orientation='Horizontal'
 								DockPanel.Dock="Top"
 								HorizontalAlignment='Stretch'
