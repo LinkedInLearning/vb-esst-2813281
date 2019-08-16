@@ -9,7 +9,7 @@
 				Height="450"
 				Width="800"
 				FontSize="20"
-				WindowState='Maximized'>
+			>
 	<DockPanel x:Name='MainPanel'
 						 Background="#FFECF7FF"
 						 LastChildFill="True">
@@ -18,14 +18,14 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="RunCodeButton"
-							Content="ToString with Format"
+							Content="Parse to Number"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"
 							MinWidth="145"
 							Margin="20"
 							Padding='6' />
 			<Button x:Name="RunCode2Button"
-							Content="Date Formats"
+							Content="TryParse"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"
 							MinWidth="145"
@@ -39,9 +39,23 @@
 							Padding='6'
 							Margin="20" />
 		</StackPanel>
+		<StackPanel Orientation='Horizontal'
+								DockPanel.Dock="Top"
+								HorizontalAlignment='Stretch'
+								Margin="40,5">
+			<TextBlock Text='Enter data:' />
+			<TextBox x:Name="InputTextBox"
+							 HorizontalAlignment="Stretch"
+							MinWidth='400'
+							Margin='10,0'
+							 Text="1415"
+							 VerticalAlignment="Stretch"
+							
+							  />
+		</StackPanel>
 		<TextBox x:Name="MessageTextBox"
 						 HorizontalAlignment="Stretch"
-						 Margin="40"
+						 Margin="40,10"
 						 TextWrapping="Wrap"
 						 Text=""
 						 VerticalAlignment="Stretch"

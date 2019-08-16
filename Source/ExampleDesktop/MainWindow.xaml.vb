@@ -1,48 +1,44 @@
-﻿Option Strict Off
+﻿Option Strict on
+Imports System.Globalization
 
 Class MainWindow
 
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
-		Dim myInteger As Integer = 43218765
-		Dim myLong As Long = 9988776655
+		Dim myInteger As Integer
+		Dim myDouble As Double
 
-		OutputToScreen("--No format--")
+
 		' code here
+
+		myInteger = Integer.Parse(InputTextBox.Text,NumberStyles.Any)
+		myDouble = Double.Parse (InputTextBox.Text, NumberStyles.Any)
+
+		OutputToScreen("--Integer------")
+		OutputToScreen(myInteger.ToString())
+		OutputToScreen("--Double------")
+		OutputToScreen(myDouble.ToString())
 
 		OutputBlankLine()
-		OutputToScreen("--Number------")
-		' code here
-
-		OutputBlankLine()
-		OutputToScreen("--Exponent-------")
-		' code here
-
-		OutputBlankLine()
-		OutputToScreen("--Currency--------")
-		' code here
-
-		OutputBlankLine()
-		OutputToScreen("--Hexadecimal--------")
-		' code here
 
 
-#Region "Learn More"
-		' learn more about format strings
-		'	https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings
-#End Region
 	End Sub
 
 	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles RunCode2Button.Click
 
+		
+		Dim myDouble As Double
+		
 
-		OutputToScreen("--Date--------")
-		' code here
+		
+			If Double.TryParse(InputTextBox.Text, myDouble) Then
+				OutputToScreen(myDouble.ToString())
+			Else
+			OutputToScreen ("Cannot parse that value.  Try again.")
+			End If
 
+		
 
-#Region "Learn More"
-		' learn more about data format strings
-		' https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings
-#End Region
+	
 
 	End Sub
 
@@ -55,18 +51,16 @@ Class MainWindow
 		MessageTextBox.Text += vbCrLf
 	End Sub
 
-	Sub OutputFormattedToScreen(message As String, number As Object)
-		Dim formatted As IFormattable = number
-		'Dim newString = formatted.ToString("G", Nothing)
-		MessageTextBox.Text += $"{message} {formatted.ToString("N0", Nothing)}{vbCrLf}"
-	End Sub
 
 	Sub OutputLine()
 		MessageTextBox.Text += "-----------" + vbCrLf
 	End Sub
 
 	Private Sub Clear(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
-		MessageTextBox.Text = ""
+		Clear()
 	End Sub
 
+	Private Sub Clear()
+		MessageTextBox.Text = ""
+	End Sub
 End Class
