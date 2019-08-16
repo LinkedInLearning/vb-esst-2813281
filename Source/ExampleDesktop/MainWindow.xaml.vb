@@ -17,7 +17,7 @@ Class MainWindow
 		Dim teamB = TeamBTextBox.Text
 		Dim message = "Don't miss this match between top-ranked (" + teamA + ") and long-time rivals (" & teamB & ")."
 		OutputToScreen(message)
-
+		
 		' string.format
 		message = String.Format("Meet the teams: ({0}) and long-time rivals ({1}).", teamA, teamB)
 		OutputToScreen(message)
