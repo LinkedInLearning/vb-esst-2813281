@@ -72,15 +72,13 @@ Class MainWindow
 			Exit Sub
 		End If
 
-		Dim numberDays As TimeSpan ' the distance between dates
+		Dim myTimeSpan As TimeSpan ' the distance between dates
 		OutputToScreen("Original Date: " + startDate.ToLongDateString)
 		Dim newDate = startDate.AddDays(5)
 		OutputToScreen("Add Days: " + newDate.ToLongDateString)
-		numberDays = endDate.Subtract(startDate)
+		myTimeSpan = endDate.Subtract(startDate)
 
-		OutputToScreen("Days between: " + numberDays.TotalDays.ToString)
-		'OutputToScreen("Months between: " + numberDays.TotalDays)
-		'OutputToScreen("Days between: " + numberDays.Days)
+		OutputToScreen("Days between: " + myTimeSpan.TotalDays.ToString)
 	End Sub
 
 	Sub OutputToScreen(message As String)
