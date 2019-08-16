@@ -9,7 +9,7 @@
 				Height="650"
 				Width="800"
 				FontSize="24"
-				WindowState='Maximized'>
+				>
 	<Window.Resources>
 		<Style TargetType='Button'>
 			<Setter Property='Margin'
@@ -30,10 +30,10 @@
 
 		<StackPanel Orientation="Horizontal"
 								DockPanel.Dock="Bottom"
-								HorizontalAlignment="Center">
-			<Button x:Name="RunCodeButton"
+								HorizontalAlignment="Center" Margin='0,0,0,20'>
+			<Button x:Name="ButtonA"
 							Content="Get Odd" />
-			<Button x:Name="RunCode2Button"
+			<Button x:Name="ButtonB"
 							Content="Get Even" />
 			<Button x:Name="ClearButton"
 							Content="Clear" />
