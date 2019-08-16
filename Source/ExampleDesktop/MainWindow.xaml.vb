@@ -3,14 +3,17 @@ Imports System.Globalization
 
 Class MainWindow
 
-	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
-		Dim myInteger As Integer
-		Dim myDouble As Double
+	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+		Dim myDate1 = #3/3/1953#
+		Dim myDate2 = New Date(1963,4,4)
+		Dim myTime As Date = #5:06:10 PM#
+
+
 
 		' code here
 
 		OutputToScreen("--Integer------")
-		OutputToScreen(myInteger.ToString())
+		OutputToScreen(myInteger)
 		OutputToScreen("--Double------")
 		OutputToScreen(myDouble.ToString())
 
@@ -18,7 +21,7 @@ Class MainWindow
 
 	End Sub
 
-	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles RunCode2Button.Click
+	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
 		Dim myDouble As Double
 		

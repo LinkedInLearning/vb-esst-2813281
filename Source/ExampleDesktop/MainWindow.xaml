@@ -6,61 +6,72 @@
 				xmlns:local="clr-namespace:ExampleDesktop"
 				mc:Ignorable="d"
 				Title="Code Explorer"
-				Height="450"
-				Width="800"
-				FontSize="20"
-			>
+				Height="700"
+				Width="900"
+				FontSize="20">
+	<Window.Resources>
+		<Style TargetType='Button'>
+			<Setter Property='Margin'
+							Value='20,10' />
+			<Setter Property='Padding'
+							Value='6' />
+			<Setter Property='MinWidth'
+							Value='145' />
+			<Setter Property='VerticalAlignment'
+							Value='Top' />
+			<Setter Property='HorizontalAlignment'
+							Value='Center' />
+		</Style>
+	</Window.Resources>
 	<DockPanel x:Name='MainPanel'
 						 Background="#FFECF7FF"
 						 LastChildFill="True">
 
 		<StackPanel Orientation="Horizontal"
 								DockPanel.Dock="Bottom"
-								HorizontalAlignment="Center">
-			<Button x:Name="RunCodeButton"
-							Content="Parse to Number"
+								HorizontalAlignment="Right" Margin='40,5'>
+			<Button x:Name="ButtonA"
+							Content="Date Input" />
+			<Button x:Name="ButtonB"
+							Content="Date Methods"
 							HorizontalAlignment="Center"
-							VerticalAlignment="Top"
-							MinWidth="145"
-							Margin="20"
-							Padding='6' />
-			<Button x:Name="RunCode2Button"
-							Content="TryParse"
-							HorizontalAlignment="Center"
-							VerticalAlignment="Top"
-							MinWidth="145"
-							Margin="20"
-							Padding='6' />
+							VerticalAlignment="Top" />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							HorizontalAlignment="Center"
-							VerticalAlignment="Top"
-							MinWidth="145"
-							Padding='6'
-							Margin="20" />
+							VerticalAlignment="Top" />
 		</StackPanel>
 		<StackPanel Orientation='Horizontal'
 								DockPanel.Dock="Top"
 								HorizontalAlignment='Stretch'
 								Margin="40,5">
-			<TextBlock Text='Enter date:' />
-			<TextBox x:Name="InputTextBox"
+			<TextBlock Text='Enter start date:' MinWidth='150' />
+			<TextBox x:Name="StartDateTextBox"
 							 HorizontalAlignment="Stretch"
-							MinWidth='400'
-							Margin='10,0'
-							 Text="1415"
-							 VerticalAlignment="Stretch"
-							
-							  />
+							 MinWidth='200'
+							 Margin='10,0'
+							 Text="11-23-2025"
+							 VerticalAlignment="Stretch" />
+			<TextBlock Text='Enter End date:' />
+			<TextBox x:Name="EndDateTextBox"
+							 HorizontalAlignment="Stretch"
+							 MinWidth='200'
+							 Margin='10,0'
+							 Text="11-14-2025"
+							 VerticalAlignment="Stretch" />
 		</StackPanel>
-		<TextBox x:Name="MessageTextBox"
-						 HorizontalAlignment="Stretch"
-						 Margin="40,10"
-						 TextWrapping="Wrap"
-						 Text=""
-						 VerticalAlignment="Stretch"
-						 IsReadOnly="True"
-						 DockPanel.Dock="Top"
-						 VerticalScrollBarVisibility='Visible' />
+		<DockPanel DockPanel.Dock="Top"
+							 Margin="40,5"
+							 LastChildFill='True'>
+			<TextBlock Text='Output:' Margin='0,10' MinWidth='150' />
+			<TextBox x:Name="MessageTextBox"
+							 HorizontalAlignment="Stretch"
+							 Margin="10"
+							 TextWrapping="Wrap"
+							 Text=""
+							 VerticalAlignment="Stretch"
+							 IsReadOnly="True"
+							 VerticalScrollBarVisibility='Visible' />
+		</DockPanel>
 	</DockPanel>
 </Window>
