@@ -40,9 +40,9 @@
 								HorizontalAlignment="Right"
 								Margin='40,5'>
 			<Button x:Name="ButtonA"
-							Content="Date Input" />
+							Content="Date variables" />
 			<Button x:Name="ButtonD"
-							Content="Time Input" />
+							Content="Time variables" />
 			<Button x:Name="ButtonB"
 							Content="Formatting" />
 			
