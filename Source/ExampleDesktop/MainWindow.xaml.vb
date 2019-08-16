@@ -4,31 +4,40 @@ Imports System.Globalization
 Class MainWindow
 
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
-		Dim myDate1 = #3/3/1953#
-		Dim myDate2 = New Date(1963, 4, 4)
-		Dim myTime1 As Date = #5:06:10 PM#
-
-		' more readable with named parameters
-
-		Dim myDate3 = New Date(year:=1974, month:=4, day:=5)
-		Dim myTime2 = New Date(year:=2007, month:=2, day:=27, hour:=16, minute:=30, second:=55)
-		' code here
+		Dim literalDate = #3/3/1953#
+		Dim parsedDate = Date.Parse("5-25-1975")
+		Dim fromDateClass = New Date(1963, 4, 4)
 
 		' current date-time
 		Dim currentDate = DateTime.Now
 
-		OutputToScreen($"myDate1: {myDate1}")
-		OutputToScreen($"myDate2: {myDate2}")
-		OutputToScreen($"myDate3: {myDate3}")
+		' more readable with named parameters
+		Dim readableDate = New Date(year:=1974, month:=4, day:=5)
+
+		' code here
+
+
+
+		OutputToScreen($"literalDate: {literalDate}")
+		OutputToScreen($"parsedDate: {parsedDate}")
+		OutputToScreen($"fromDateClass: {fromDateClass}")
+
 		OutputLine()
 		OutputToScreen($"currentDate: {currentDate}")
 		OutputLine()
-		OutputToScreen($"myTime2: {myTime1}")
-		OutputToScreen($"myTime2: {myTime2}")
-		OutputToScreen($"myTime2 Formatted: {myTime2.ToLongTimeString}")
+
+		OutputToScreen($"readableDate: {readableDate}")
+	End Sub
+	Private Sub ButtonD_Click(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
+		Dim literalTime As Date = #5:06:10 PM#
+		' more readable with named parameters
+		Dim fromDateClass = New Date(year:=2007, month:=2, day:=27, hour:=16, minute:=30, second:=55)
+
+		OutputToScreen($"literalTime: {literalTime}")
+		OutputToScreen($"fromDateClass: {fromDateClass}")
+		OutputToScreen($"fromDateClass Formatted: {fromDateClass.ToLongTimeString}")
 
 		OutputBlankLine()
-
 	End Sub
 
 	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
