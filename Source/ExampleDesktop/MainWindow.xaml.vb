@@ -4,26 +4,24 @@ Imports System.Globalization
 Class MainWindow
 
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
-		Dim literalDate = #3/3/1953#
-		Dim parsedDate = Date.Parse("5-25-1975")
-		Dim fromDateClass = New Date(1963, 4, 4)
+
 
 		' current date-time
-		Dim currentDate = DateTime.Now
+
 
 		' more readable with named parameters
-		Dim readableDate = New Date(year:=1974, month:=4, day:=5)
 
 
-		OutputToScreen($"literalDate: {literalDate}")
-		OutputToScreen($"parsedDate: {parsedDate}")
-		OutputToScreen($"fromDateClass: {fromDateClass}")
 
-		OutputLine()
-		OutputToScreen($"currentDate: {currentDate}")
-		OutputLine()
+		'OutputToScreen($"literalDate: {literalDate}")
+		'OutputToScreen($"parsedDate: {parsedDate}")
+		'OutputToScreen($"fromDateClass: {fromDateClass}")
 
-		OutputToScreen($"readableDate: {readableDate}")
+		'OutputLine()
+		'OutputToScreen($"currentDate: {currentDate}")
+		'OutputLine()
+
+		'OutputToScreen($"readableDate: {readableDate}")
 	End Sub
 	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
 		Dim literalTime As Date = #5:06:10 PM#
