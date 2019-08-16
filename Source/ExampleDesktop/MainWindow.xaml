@@ -6,9 +6,9 @@
 				xmlns:local="clr-namespace:ExampleDesktop"
 				mc:Ignorable="d"
 				Title="Code Explorer"
-				Height="450"
+				Height="650"
 				Width="800"
-				FontSize="20"
+				FontSize="24"
 				WindowState='Maximized'>
 	<Window.Resources>
 		<Style TargetType='Button'>
@@ -32,9 +32,9 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="RunCodeButton"
-							Content="ToString with Format" />
+							Content="Get Odd" />
 			<Button x:Name="RunCode2Button"
-							Content="Date Formats" />
+							Content="Get Even" />
 			<Button x:Name="ClearButton"
 							Content="Clear" />
 		</StackPanel>
