@@ -34,9 +34,8 @@ Class MainWindow
 		' verify if a sub string is available
 
 		Dim periodExists = message.EndsWith(".")
-		Dim wordExists = message.Contains("Learning")
+		Dim wordExists = message.StartsWith("Hello")
 
-		wordExists = message.StartsWith("Hello")
 		' finding by index
 		' return -1 if not found, otherwise the index location
 		Dim searchWord = SearchWordTextbox.Text
