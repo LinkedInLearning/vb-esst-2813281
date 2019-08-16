@@ -14,9 +14,6 @@ Class MainWindow
 		' more readable with named parameters
 		Dim readableDate = New Date(year:=1974, month:=4, day:=5)
 
-		' code here
-
-
 
 		OutputToScreen($"literalDate: {literalDate}")
 		OutputToScreen($"parsedDate: {parsedDate}")
@@ -28,7 +25,7 @@ Class MainWindow
 
 		OutputToScreen($"readableDate: {readableDate}")
 	End Sub
-	Private Sub ButtonD_Click(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
+	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
 		Dim literalTime As Date = #5:06:10 PM#
 		' more readable with named parameters
 		Dim fromDateClass = New Date(year:=2007, month:=2, day:=27, hour:=16, minute:=30, second:=55)
@@ -40,7 +37,7 @@ Class MainWindow
 		OutputBlankLine()
 	End Sub
 
-	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
+	Private Sub RunCode3(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
 		Dim startDate, endDate As Date
 		If Date.TryParse(StartDateTextBox.Text, startDate) = False Then
@@ -64,7 +61,7 @@ Class MainWindow
 
 	End Sub
 
-	Private Sub ButtonC_Click(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+	Private Sub RunCode4(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
 		' how many days between days
 		Dim startDate, endDate As Date
 		If Date.TryParse(StartDateTextBox.Text, startDate) = False Then
