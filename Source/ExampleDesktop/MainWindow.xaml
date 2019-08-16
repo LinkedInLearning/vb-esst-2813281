@@ -10,6 +10,20 @@
 				Width="800"
 				FontSize="20"
 				WindowState='Maximized'>
+	<Window.Resources>
+		<Style TargetType='Button'>
+			<Setter Property='Margin'
+							Value='20,3' />
+			<Setter Property='Padding'
+							Value='6' />
+			<Setter Property='MinWidth'
+							Value='145' />
+			<Setter Property='VerticalAlignment'
+							Value='Top' />
+			<Setter Property='HorizontalAlignment'
+							Value='Center' />
+		</Style>
+	</Window.Resources>
 	<DockPanel x:Name='MainPanel'
 						 Background="#FFECF7FF"
 						 LastChildFill="True">
@@ -18,26 +32,11 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="RunCodeButton"
-							Content="ToString with Format"
-							HorizontalAlignment="Center"
-							VerticalAlignment="Top"
-							MinWidth="145"
-							Margin="20"
-							Padding='6' />
+							Content="ToString with Format" />
 			<Button x:Name="RunCode2Button"
-							Content="Date Formats"
-							HorizontalAlignment="Center"
-							VerticalAlignment="Top"
-							MinWidth="145"
-							Margin="20"
-							Padding='6' />
+							Content="Date Formats" />
 			<Button x:Name="ClearButton"
-							Content="Clear"
-							HorizontalAlignment="Center"
-							VerticalAlignment="Top"
-							MinWidth="145"
-							Padding='6'
-							Margin="20" />
+							Content="Clear" />
 		</StackPanel>
 		<TextBox x:Name="MessageTextBox"
 						 HorizontalAlignment="Stretch"
