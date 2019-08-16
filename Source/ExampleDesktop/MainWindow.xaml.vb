@@ -1,4 +1,4 @@
-﻿Option Strict on
+﻿Option Strict Off
 Imports System.Globalization
 
 Class MainWindow
@@ -7,11 +7,7 @@ Class MainWindow
 		Dim myInteger As Integer
 		Dim myDouble As Double
 
-
 		' code here
-
-		myInteger = Integer.Parse(InputTextBox.Text,NumberStyles.Any)
-		myDouble = Double.Parse (InputTextBox.Text, NumberStyles.Any)
 
 		OutputToScreen("--Integer------")
 		OutputToScreen(myInteger.ToString())
@@ -20,25 +16,14 @@ Class MainWindow
 
 		OutputBlankLine()
 
-
 	End Sub
 
 	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles RunCode2Button.Click
 
-		
 		Dim myDouble As Double
 		
-
+			' code here
 		
-			If Double.TryParse(InputTextBox.Text, myDouble) Then
-				OutputToScreen(myDouble.ToString())
-			Else
-			OutputToScreen ("Cannot parse that value.  Try again.")
-			End If
-
-		
-
-	
 
 	End Sub
 
