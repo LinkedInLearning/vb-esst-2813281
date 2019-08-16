@@ -28,10 +28,8 @@ Class MainWindow
 
 	End Sub
 
-
-
 	Private Sub Search_Click(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
-		Dim message = "Personalize your LinkedIn Learning experience with skills you're interested in."
+		Dim message = "Personalize your LinkedIn Learning experience with skills you need."
 		OutputToScreen(message)
 		' verify if a sub string is available
 
