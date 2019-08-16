@@ -7,12 +7,9 @@ Class MainWindow
 		Dim myInteger As Integer
 		Dim myDouble As Double
 
-
 		' code here
-
-		myInteger = Integer.Parse(InputTextBox.Text,NumberStyles.Any)
-		myDouble = Double.Parse (InputTextBox.Text, NumberStyles.Any)
-
+		myInteger = Integer.Parse( InputTextBox.Text ,NumberStyles.AllowThousands)
+	myDouble = Double.Parse (InputTextBox.Text)
 		OutputToScreen("--Integer------")
 		OutputToScreen(myInteger.ToString())
 		OutputToScreen("--Double------")
@@ -20,25 +17,18 @@ Class MainWindow
 
 		OutputBlankLine()
 
-
 	End Sub
 
 	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles RunCode2Button.Click
 
-		
 		Dim myDouble As Double
-		
 
-		
-			If Double.TryParse(InputTextBox.Text, myDouble) Then
-				OutputToScreen(myDouble.ToString())
+		' code here
+		If  Double.TryParse (InputTextBox.Text, myDouble) Then
+			OutputToScreen(myDouble.ToString())
 			Else
-			OutputToScreen ("Cannot parse that value.  Try again.")
-			End If
-
-		
-
-	
+			OutputToScreen ("cannot parse the value, try again.")
+		End If
 
 	End Sub
 
