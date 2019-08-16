@@ -5,6 +5,7 @@ Class MainWindow
 
 	Private Sub CreateString_Click(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 		Dim direction = "East"
+		Dim otherDirection As String = "West"
 		' use the constructor to build a string
 		Dim line = New String("»"c, 63)
 		OutputToScreen(direction)
