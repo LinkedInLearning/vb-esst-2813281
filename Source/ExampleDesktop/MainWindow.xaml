@@ -43,7 +43,7 @@
 								DockPanel.Dock="Top"
 								HorizontalAlignment='Stretch'
 								Margin="40,5">
-			<TextBlock Text='Enter data:' />
+			<TextBlock Text='Enter date:' />
 			<TextBox x:Name="InputTextBox"
 							 HorizontalAlignment="Stretch"
 							MinWidth='400'
