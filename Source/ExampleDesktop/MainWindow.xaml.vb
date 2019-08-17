@@ -6,12 +6,13 @@ Class MainWindow
 
 
 		Dim odd = GetRandomOddNumber()
-		Dim even = GetRandomEvenNumber()
 
+		OutputToScreen(odd)
 	End Sub
 
 	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
-
+		Dim even = GetRandomEvenNumber()
+		OutputToScreen(even)
 
 	End Sub
 
