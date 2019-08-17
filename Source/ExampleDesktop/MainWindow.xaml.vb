@@ -18,7 +18,7 @@ Class MainWindow
 		Dim sentence As String = "One word after another."
 		Dim taxRate As Double = 7.8
 		Dim birthDate = Date.Parse("5/5/1992")
-		' use a directory that is on you hardrive
+		' use a directory that is on you hard drive
 		Dim sampleDir = New DirectoryInfo("c:\VBTemp")
 
 	End Sub
