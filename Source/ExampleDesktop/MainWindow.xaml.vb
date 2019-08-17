@@ -3,7 +3,7 @@
 Class MainWindow
 
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
-		PrintDocument()
+
 
 		Dim odd = GetRandomOddNumber()
 		Dim even = GetRandomEvenNumber()
