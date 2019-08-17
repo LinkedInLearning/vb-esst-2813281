@@ -4,12 +4,8 @@ Class MainWindow
 
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 
-
-		Dim monthlyPayment As Decimal
-		Dim rate As Decimal = 5.6D
-		monthlyPayment = Financial.CalculateMonthlyPayment(numberOfMonths:=12, loanRate:=rate, loanAmount:=1200)
-		monthlyPayment = Financial.CalculateMonthlyPayment(numberOfMonths:=24, loanRate:=rate, loanAmount:=2800)
-		monthlyPayment = Financial.CalculateMonthlyPayment(numberOfMonths:=36, loanRate:=rate, loanAmount:=3700)
+		Dim odd As Integer
+		odd = GetRandomOddNumber(201)
 
 	End Sub
 
