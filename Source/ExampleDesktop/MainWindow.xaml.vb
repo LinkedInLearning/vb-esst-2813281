@@ -10,10 +10,7 @@ Class MainWindow
 		ExamplesForWatchWindow()
 	End Sub
 
-	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
-
-	End Sub
 	Public Sub ExamplesForWatchWindow()
 		Dim sentence As String = "One word after another."
 		Dim taxRate As Double = 7.8
@@ -22,7 +19,10 @@ Class MainWindow
 		Dim sampleDir = New DirectoryInfo("c:\VBTemp")
 
 	End Sub
+	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
+
+	End Sub
 #Region "Output Methods"
 
 	Sub OutputToScreen(message As String)
