@@ -1,13 +1,18 @@
 ﻿Module NumberGenerator
 
-	Public Function GetRandomOddNumber() As Integer
-		Dim candidate As Integer = GetRandomNumber(201)
-		Return GetOddOrEven(candidate, True)
+	Public Function GetRandomOddNumber(maxValue As Integer) As Integer
+
+		Return GetOddOrEven(GetRandomNumber(maxValue), True)
 
 	End Function
-	Public Function GetRandomEvenNumber() As Integer
-		Dim candidate As Integer = GetRandomNumber(201)
-		Return GetOddOrEven(candidate, False)
+	Public Function GetRandomEvenNumber(maxValue As Integer) As Integer
+		'Dim candidate As Integer = GetRandomNumber(maxValue)
+		Return GetOddOrEven(GetRandomNumber(maxValue), False)
+	End Function
+
+	Public Function GetRandomSquaredNumber(maxValue As Integer) As Integer
+		Dim candidate As Integer = GetRandomNumber(maxValue)
+		Return candidate * candidate
 	End Function
 
 	Private Function GetOddOrEven(candidate As Integer, wantOdd As Boolean) As Integer

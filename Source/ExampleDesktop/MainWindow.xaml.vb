@@ -8,8 +8,14 @@ Class MainWindow
 		' by entering an integer in the NumberTextBox. 
 		' Don't forget to validate the input 
 		' from NumberTextBox to prevent non integer values.
+		Dim maxValue As Integer
 
-		Dim odd = GetRandomOddNumber()
+		If Integer.TryParse(NumberTextBox.Text, maxValue) = False Then
+			OutputToScreen("Cannot parse value, try again.")
+			Exit Sub
+
+		End If
+		Dim odd = GetRandomOddNumber(maxValue)
 
 		OutputToScreen(odd)
 	End Sub
@@ -20,7 +26,13 @@ Class MainWindow
 		' by entering an integer in the NumberTextBox.
 		' Don't forget to validate the input 
 		' from NumberTextBox to prevent non integer values.
-		Dim even = GetRandomEvenNumber()
+		Dim maxValue As Integer
+
+		If Integer.TryParse(NumberTextBox.Text, maxValue) = False Then
+			OutputToScreen("Cannot parse value, try again.")
+			Exit Sub
+		End If
+		Dim even = GetRandomEvenNumber(maxValue)
 		OutputToScreen(even)
 
 	End Sub
@@ -32,6 +44,14 @@ Class MainWindow
 		' when this button is clicked
 		' 2, 4, 9, 16, 25, 36 etc.
 		' reuse or refactor the code in Module NumberGenerator
+		Dim maxValue As Integer
+
+		If Integer.TryParse(NumberTextBox.Text, maxValue) = False Then
+			OutputToScreen("Cannot parse value, try again.")
+			Exit Sub
+		End If
+		Dim squared = GetRandomSquaredNumber(maxValue)
+		OutputToScreen(squared)
 	End Sub
 
 #Region "Output Methods"
