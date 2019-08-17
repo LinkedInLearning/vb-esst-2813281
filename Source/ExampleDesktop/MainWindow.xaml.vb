@@ -3,10 +3,12 @@
 Class MainWindow
 
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
-		PrintDocument()
+		Dim gen = New NumberGenerator
 
-		Dim odd = GetRandomOddNumber()
-		Dim even = GetRandomEvenNumber()
+		gen.PrintDocument()
+
+		Dim odd = gen.GetRandomOddNumber()
+		Dim even = gen.GetRandomEvenNumber()
 
 	End Sub
 
