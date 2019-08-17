@@ -32,9 +32,9 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center" Margin='0,0,0,20'>
 			<Button x:Name="ButtonA"
-							Content="Breakpoint" />
+							Content="Step through code" />
 			<Button x:Name="ButtonB"
-							Content="Another Breakpoint" />
+							Content="..." />
 			<Button x:Name="ClearButton"
 							Content="Clear" />
 		</StackPanel>
