@@ -35,8 +35,22 @@
 							Content="Get Odd" />
 			<Button x:Name="ButtonB"
 							Content="Get Even" />
+			<Button x:Name="ButtonC"
+							Content="Get Squared" />
 			<Button x:Name="ClearButton"
 							Content="Clear" />
+		</StackPanel>
+		<StackPanel Orientation='Horizontal'
+								DockPanel.Dock="Top"
+								HorizontalAlignment='Stretch'
+								Margin="40,5">
+			<TextBlock Text='Enter a integer value:' />
+			<TextBox x:Name="NumberTextBox"
+							 HorizontalAlignment="Stretch"
+							 MinWidth='400'
+							 Margin='10,0'
+							 Text="335"
+							 VerticalAlignment="Stretch" />
 		</StackPanel>
 		<TextBox x:Name="MessageTextBox"
 						 HorizontalAlignment="Stretch"

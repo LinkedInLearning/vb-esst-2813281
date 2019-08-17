@@ -3,7 +3,9 @@
 Class MainWindow
 
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
-
+		' Challenge: Part 1
+		' allow the user to enter the max value
+		' by entering an integer in the NumberTextBox 
 
 		Dim odd = GetRandomOddNumber()
 
@@ -11,9 +13,20 @@ Class MainWindow
 	End Sub
 
 	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
+		' Challenge: Part 1
+		' allow the user to enter the max value
+		' by entering an integer in the NumberTextBox 
 		Dim even = GetRandomEvenNumber()
 		OutputToScreen(even)
 
+	End Sub
+
+	Private Sub RunCode3(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+		' Challenge: Part 2
+		' show a random squared value
+		' when this button is clicked
+		' 2, 4, 9, 16, 25, 36 etc.
+		' reuse or refactor the code in Module NumberGenerator
 	End Sub
 
 #Region "Output Methods"
@@ -32,5 +45,7 @@ Class MainWindow
 	Private Sub Clear(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
 		MessageTextBox.Text = ""
 	End Sub
+
+
 #End Region
 End Class
