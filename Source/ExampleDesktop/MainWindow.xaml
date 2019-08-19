@@ -33,87 +33,6 @@
 						 Background="#FFECF7FF"
 						 LastChildFill="True">
 		<TabControl>
-			<TabItem Header='Comparison'>
-				<DockPanel>
-					<StackPanel Orientation="Horizontal"
-											DockPanel.Dock="Bottom"
-											HorizontalAlignment="Center">
-						<Button x:Name="ClearButton"
-										Content="Clear" />
-					</StackPanel>
-					<StackPanel Orientation="Horizontal"
-											DockPanel.Dock="Bottom"
-											HorizontalAlignment="Center">
-						<Button x:Name="ButtonA"
-										Content="If" />
-						<Button x:Name="ButtonB"
-										Content="If Else" />
-						<Button x:Name="ButtonC"
-										Content="Else If" />
-						<!--<Button x:Name="ButtonD"
-							Content="Search" />-->
-					</StackPanel>
-					<StackPanel Orientation='Horizontal'
-											DockPanel.Dock="Top"
-											HorizontalAlignment='Stretch'
-											Margin="5">
-						<TextBlock Text='The current random number:' />
-						<TextBlock x:Name="CurrentNumberTextBlock"
-											 HorizontalAlignment="Stretch"
-											 MinWidth='200'
-											 Margin='10,0'
-											 Text="0"
-											 VerticalAlignment="Stretch" />
-
-					</StackPanel>
-
-					<Grid>
-						<Grid.ColumnDefinitions>
-							<ColumnDefinition Width='1*' />
-							<ColumnDefinition Width='1*' />
-							<ColumnDefinition Width='1*' />
-						</Grid.ColumnDefinitions>
-						<DockPanel>
-							<TextBlock Text='Less than 100'
-												 DockPanel.Dock='Top' />
-							<TextBox x:Name="Message1TextBox"
-											 HorizontalAlignment="Stretch"
-											 Margin="10"
-											 TextWrapping="Wrap"
-											 Text=""
-											 VerticalAlignment="Stretch"
-											 IsReadOnly="True"
-											 VerticalScrollBarVisibility='Visible' />
-						</DockPanel>
-						<DockPanel Grid.Column='1'>
-							<TextBlock Text='Greater than 300'
-												 DockPanel.Dock='Top' />
-							<TextBox x:Name="Message2TextBox"
-											 HorizontalAlignment="Stretch"
-											 Margin="10"
-											 TextWrapping="Wrap"
-											 Text=""
-											 VerticalAlignment="Stretch"
-											 IsReadOnly="True"
-											 VerticalScrollBarVisibility='Visible' />
-						</DockPanel>
-						<DockPanel Grid.Column='2'>
-							<TextBlock Text='Other value'
-												 DockPanel.Dock='Top' />
-							<TextBox x:Name="Message3TextBox"
-											 HorizontalAlignment="Stretch"
-											 Margin="40,10"
-											 TextWrapping="Wrap"
-											 Text=""
-											 VerticalAlignment="Stretch"
-											 IsReadOnly="True"
-											 VerticalScrollBarVisibility='Visible'
-											 Grid.Column='2' />
-						</DockPanel>
-					</Grid>
-
-				</DockPanel>
-			</TabItem>
 			<TabItem Header='Logical'>
 				<Grid>
 					<Grid.ColumnDefinitions>
@@ -162,32 +81,6 @@
 								 MaxHeight='450'
 								 Visibility='Hidden' />
 				</Grid>
-			</TabItem>
-			<TabItem Header='Short Circuit'>
-				<StackPanel>
-
-					<TextBlock Text="AndAlso has same logic as AND, but it will not evaluate the second expression if first expression is false."
-										 Margin='20'
-										 MaxWidth='500'
-										 TextWrapping='Wrap'
-										 HorizontalAlignment='Left' />
-					<TextBlock Margin='20'
-										 MaxWidth='500'
-										 TextWrapping='Wrap'
-										 HorizontalAlignment='Left'
-										 Text='This is useful if the second expression is expensive (for example a slow function call).' />
-
-					<Button x:Name="ButtonH"
-									HorizontalAlignment='Left'
-									Content="And" />
-					<Button x:Name="ButtonJ"
-									HorizontalAlignment='Left'
-									Content="AndAlso"
-									Margin='20,10,0,10' />
-					<TextBlock Text='...'
-										 x:Name='SlowMessageTextBlock'
-										 Margin='20' />
-				</StackPanel>
 			</TabItem>
 
 		</TabControl>
