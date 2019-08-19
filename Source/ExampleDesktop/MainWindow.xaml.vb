@@ -7,34 +7,36 @@ Class MainWindow
 		Dim odd = GetRandomOddNumber(401)
 		CurrentRandomOutput.Text = odd
 
-
 		If odd < 100 Then
-			LowNumberOutput.Text += odd.ToString() + vbCrLf
+			LowNumberOutput.Text &= odd.ToString & vbCrLf
 		End If
+
 	End Sub
 
 	Private Sub IfElseDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 		Dim odd = GetRandomOddNumber(401)
 		CurrentRandomOutput.Text = odd
+
 		If odd < 100 Then
-			LowNumberOutput.Text += odd.ToString() + vbCrLf
+			LowNumberOutput.Text &= odd.ToString & vbCrLf
 		Else
-			OtherNumberOutput.Text += odd.ToString() + vbCrLf
+			OtherNumberOutput.Text &= odd.ToString & vbCrLf
 		End If
 
 	End Sub
 
 	Private Sub IfElseIfDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
-
+		Dim databaseName As String = "db400"
 		Dim odd = GetRandomOddNumber(401)
 		CurrentRandomOutput.Text = odd
-		If odd < 100 Then
-			LowNumberOutput.Text += odd.ToString() + vbCrLf
-		ElseIf odd > 300 Then
-			HighNumberOutput.Text += odd.ToString() + vbCrLf
 
+		If odd < 100 Then
+			LowNumberOutput.Text &= odd.ToString & vbCrLf
+
+		ElseIf odd > 300 Then
+			HighNumberOutput.Text &= odd.ToString & vbCrLf
 		Else
-			OtherNumberOutput.Text += odd.ToString() + vbCrLf
+			OtherNumberOutput.Text &= odd.ToString & vbCrLf
 		End If
 
 	End Sub
