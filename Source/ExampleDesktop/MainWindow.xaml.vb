@@ -3,7 +3,6 @@ Imports System.Globalization
 
 Class MainWindow
 
-
 	Private Sub AndDemo(sender As Object, e As RoutedEventArgs) Handles ButtonE.Click
 
 		If DayTextBox.Text = "Monday" And TimeTextBox.Text = "3:00" Then
@@ -29,6 +28,5 @@ Class MainWindow
 				PizzaAwardTextBox.Text += "No Pizza, Here's a coupon." + vbCrLf
 		End If
 	End Sub
-
 
 End Class
