@@ -6,6 +6,8 @@ Class MainWindow
 	Private Sub IfDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 		Dim odd = GetRandomOddNumber(401)
 		CurrentNumberTextBlock.Text = odd
+
+	
 		If odd < 100 Then
 			Message1TextBox.Text += odd.ToString() + vbCrLf
 		End If
@@ -14,9 +16,9 @@ Class MainWindow
 	Private Sub IfElseDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 		Dim odd = GetRandomOddNumber(401)
 		CurrentNumberTextBlock.Text = odd
-		If odd < 100 Then
+			If odd < 100 Then
 			Message1TextBox.Text += odd.ToString() + vbCrLf
-		Else
+			Else
 			Message3TextBox.Text += odd.ToString() + vbCrLf
 		End If
 
@@ -28,9 +30,10 @@ Class MainWindow
 		CurrentNumberTextBlock.Text = odd
 		If odd < 100 Then
 			Message1TextBox.Text += odd.ToString() + vbCrLf
-			ElseIf	odd > 300 Then
-			Message2TextBox.Text += odd.ToString() + vbCrLf
-		Else
+			ElseIf	odd >300 
+				Message2TextBox.Text += odd.ToString() + vbCrLf
+
+			Else
 			Message3TextBox.Text += odd.ToString() + vbCrLf
 		End If
 
@@ -40,9 +43,11 @@ Class MainWindow
 		If DayTextBox.Text = "Monday" And TimeTextBox.Text = "3:00" Then
 			PizzaImage.Visibility = Visibility.Visible
 			CouponImage.Visibility = Visibility.Hidden
+			PizzaAwardTextBox.Text += "Free Pizza!" + vbCrLf
 		Else
 			PizzaImage.Visibility = Visibility.Hidden
 			CouponImage.Visibility = Visibility.Visible
+			PizzaAwardTextBox.Text += "No Pizza, Here's a coupon." + vbCrLf
 		End If
 
 	End Sub
@@ -51,9 +56,11 @@ Class MainWindow
 		If DayTextBox.Text = "Monday" Or TimeTextBox.Text = "3:00" Then
 			PizzaImage.Visibility = Visibility.Visible
 			CouponImage.Visibility = Visibility.Hidden
+			PizzaAwardTextBox.Text += "Free Pizza!" + vbCrLf
 		Else
 			PizzaImage.Visibility = Visibility.Hidden
 			CouponImage.Visibility = Visibility.Visible
+				PizzaAwardTextBox.Text += "No Pizza, Here's a coupon." + vbCrLf
 		End If
 	End Sub
 
