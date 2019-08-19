@@ -31,9 +31,9 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonE"
-							Content="Modify" />
+							Content="And" />
 			<Button x:Name="ButtonF"
-							Content="Split" />
+							Content="AndAlso" />
 			<Button x:Name="ClearButton"
 							Content="Clear" />
 		</StackPanel>
@@ -41,13 +41,13 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="Create String" />
+							Content="If" />
 			<Button x:Name="ButtonB"
-							Content="Concatenate" />
-			<!--<Button x:Name="ButtonC"
-							Content="Chars" />-->
-			<Button x:Name="ButtonD"
-							Content="Search" />
+							Content="If Else" />
+			<Button x:Name="ButtonC"
+							Content="Else If" />
+			<!--<Button x:Name="ButtonD"
+							Content="Search" />-->
 		</StackPanel>
 		<StackPanel Orientation='Horizontal'
 								DockPanel.Dock="Top"
