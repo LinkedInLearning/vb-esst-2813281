@@ -47,9 +47,9 @@
 						<Button x:Name="ButtonA"
 										Content="If" />
 						<Button x:Name="ButtonB"
-										Content="If Else" />
+										Content="If-Else" />
 						<Button x:Name="ButtonC"
-										Content="Else If" />
+										Content="If-ElseIf" />
 						<!--<Button x:Name="ButtonD"
 							Content="Search" />-->
 					</StackPanel>
