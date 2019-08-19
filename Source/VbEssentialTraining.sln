@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ExampleDesktop", "ExampleDesktop\ExampleDesktop.vbproj", "{A6DEC69A-9D83-4EB5-BF92-7B78E4080361}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AndAlso", "AndAlso", "{DDEF1E63-5A7A-4781-9135-8E9290876CC5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logical", "Logical", "{DDEF1E63-5A7A-4781-9135-8E9290876CC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
