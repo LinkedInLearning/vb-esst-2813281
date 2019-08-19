@@ -5,21 +5,21 @@ Class MainWindow
 
 	Private Sub IfDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 		Dim odd = GetRandomOddNumber(401)
-		CurrentNumberTextBlock.Text = odd
+		CurrentRandomOutput.Text = odd
 
-	
+
 		If odd < 100 Then
-			Message1TextBox.Text += odd.ToString() + vbCrLf
+			LowNumberOutput.Text += odd.ToString() + vbCrLf
 		End If
 	End Sub
 
 	Private Sub IfElseDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 		Dim odd = GetRandomOddNumber(401)
-		CurrentNumberTextBlock.Text = odd
-			If odd < 100 Then
-			Message1TextBox.Text += odd.ToString() + vbCrLf
-			Else
-			Message3TextBox.Text += odd.ToString() + vbCrLf
+		CurrentRandomOutput.Text = odd
+		If odd < 100 Then
+			LowNumberOutput.Text += odd.ToString() + vbCrLf
+		Else
+			OtherNumberOutput.Text += odd.ToString() + vbCrLf
 		End If
 
 	End Sub
@@ -27,14 +27,14 @@ Class MainWindow
 	Private Sub IfElseIfDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
 
 		Dim odd = GetRandomOddNumber(401)
-		CurrentNumberTextBlock.Text = odd
+		CurrentRandomOutput.Text = odd
 		If odd < 100 Then
-			Message1TextBox.Text += odd.ToString() + vbCrLf
-			ElseIf	odd >300 
-				Message2TextBox.Text += odd.ToString() + vbCrLf
+			LowNumberOutput.Text += odd.ToString() + vbCrLf
+		ElseIf odd > 300 Then
+			HighNumberOutput.Text += odd.ToString() + vbCrLf
 
-			Else
-			Message3TextBox.Text += odd.ToString() + vbCrLf
+		Else
+			OtherNumberOutput.Text += odd.ToString() + vbCrLf
 		End If
 
 	End Sub
@@ -60,20 +60,20 @@ Class MainWindow
 		Else
 			PizzaImage.Visibility = Visibility.Hidden
 			CouponImage.Visibility = Visibility.Visible
-				PizzaAwardTextBox.Text += "No Pizza, Here's a coupon." + vbCrLf
+			PizzaAwardTextBox.Text += "No Pizza, Here's a coupon." + vbCrLf
 		End If
 	End Sub
 
 
 
 	Private Sub Clear(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
-			Clear()
+		Clear()
 	End Sub
 
-	Private sub Clear()
-		Message1TextBox.Text = ""
-			Message2TextBox.Text = ""
-			Message3TextBox.Text = ""
+	Private Sub Clear()
+		LowNumberOutput.Text = ""
+		HighNumberOutput.Text = ""
+		OtherNumberOutput.Text = ""
 	End sub
 
 	Private Async Sub AndSlow(sender As Object, e As RoutedEventArgs) Handles ButtonH.Click

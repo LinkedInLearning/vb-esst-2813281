@@ -58,7 +58,7 @@
 											HorizontalAlignment='Stretch'
 											Margin="5">
 						<TextBlock Text='The current random number:' />
-						<TextBlock x:Name="CurrentNumberTextBlock"
+						<TextBlock x:Name="CurrentRandomOutput"
 											 HorizontalAlignment="Stretch"
 											 MinWidth='200'
 											 Margin='10,0'
@@ -76,7 +76,19 @@
 						<DockPanel>
 							<TextBlock Text='Less than 100'
 												 DockPanel.Dock='Top' />
-							<TextBox x:Name="Message1TextBox"
+							<TextBox x:Name="LowNumberOutput"
+											 HorizontalAlignment="Stretch"
+											 Margin="10"
+											 TextWrapping="Wrap"
+											 Text=""
+											 VerticalAlignment="Stretch"
+											 IsReadOnly="True"
+											 VerticalScrollBarVisibility='Visible' />
+						</DockPanel>
+						<DockPanel Grid.Column='3'>
+							<TextBlock Text='Greater than 300'
+												 DockPanel.Dock='Top' />
+							<TextBox x:Name="HighNumberOutput"
 											 HorizontalAlignment="Stretch"
 											 Margin="10"
 											 TextWrapping="Wrap"
@@ -86,21 +98,9 @@
 											 VerticalScrollBarVisibility='Visible' />
 						</DockPanel>
 						<DockPanel Grid.Column='1'>
-							<TextBlock Text='Greater than 300'
-												 DockPanel.Dock='Top' />
-							<TextBox x:Name="Message2TextBox"
-											 HorizontalAlignment="Stretch"
-											 Margin="10"
-											 TextWrapping="Wrap"
-											 Text=""
-											 VerticalAlignment="Stretch"
-											 IsReadOnly="True"
-											 VerticalScrollBarVisibility='Visible' />
-						</DockPanel>
-						<DockPanel Grid.Column='2'>
 							<TextBlock Text='Other value'
 												 DockPanel.Dock='Top' />
-							<TextBox x:Name="Message3TextBox"
+							<TextBox x:Name="OtherNumberOutput"
 											 HorizontalAlignment="Stretch"
 											 Margin="40,10"
 											 TextWrapping="Wrap"
