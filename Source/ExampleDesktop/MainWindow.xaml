@@ -47,13 +47,20 @@
 										 HorizontalAlignment='Left'
 										 Text='This is useful if the second expression is expensive (for example a slow function call).' />
 
-					<Button x:Name="ButtonH"
-									HorizontalAlignment='Left'
-									Content="And" />
-					<Button x:Name="ButtonJ"
-									HorizontalAlignment='Left'
-									Content="AndAlso"
-									Margin='20,10,0,10' />
+					<StackPanel Orientation='Horizontal'>
+						<Button x:Name="ButtonH"
+										HorizontalAlignment='Left'
+										Content="And" />
+						<TextBlock Text='IsNetWorkAvailable() And IsDatabaseOnline()' VerticalAlignment='Center' HorizontalAlignment='Left'/>
+					</StackPanel>
+					<StackPanel Orientation='Horizontal'>
+						<Button x:Name="ButtonJ"
+										HorizontalAlignment='Left'
+										Content="AndAlso"
+										Margin='20' />
+						<TextBlock Text='IsNetWorkAvailable() AndAlso IsDatabaseOnline()'
+											 VerticalAlignment='Center' />
+					</StackPanel>
 					<TextBlock Text='...'
 										 x:Name='SlowMessageTextBlock'
 										 Margin='20' />
