@@ -4,7 +4,10 @@ Class MainWindow
 
 	Private Async Sub DoDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 		Dim engineStatus As Integer
-
+		Do
+			engineStatus = Await GetEngineStatus()
+			OutputToScreen(engineStatus)
+		Loop While engineStatus >= 0
 
 
 	End Sub
