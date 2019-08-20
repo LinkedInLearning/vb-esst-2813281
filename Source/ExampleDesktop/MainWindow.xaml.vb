@@ -1,4 +1,5 @@
 ﻿Option Strict Off
+Option Compare Text
 Imports System.Globalization
 
 Class MainWindow
@@ -25,7 +26,7 @@ Class MainWindow
 		Else
 			PizzaImage.Visibility = Visibility.Hidden
 			CouponImage.Visibility = Visibility.Visible
-				PizzaAwardTextBox.Text += "No Pizza, Here's a coupon." + vbCrLf
+			PizzaAwardTextBox.Text += "No Pizza, Here's a coupon." + vbCrLf
 		End If
 	End Sub
 
