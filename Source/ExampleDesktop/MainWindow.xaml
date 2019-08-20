@@ -59,7 +59,7 @@
 					<Grid>
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width='1*' />
-					
+
 						</Grid.ColumnDefinitions>
 						<DockPanel>
 							<TextBox x:Name="OutputTextBox"
@@ -71,27 +71,93 @@
 											 IsReadOnly="True"
 											 VerticalScrollBarVisibility='Visible' />
 						</DockPanel>
-						
-						
+
 					</Grid>
 
 				</DockPanel>
 			</TabItem>
+			<TabItem Header='For Loop Variables'>
+				<DockPanel  LastChildFill="True">
+
+					<StackPanel Orientation="Horizontal"
+											DockPanel.Dock="Bottom"
+											HorizontalAlignment="Center">
+						<Button x:Name="ButtonD"
+										Content="Go" />
+						<Button x:Name="ButtonClear2"
+										Content="Clear" />
+
+					</StackPanel>
+					<StackPanel Orientation="Horizontal"
+											DockPanel.Dock="Top"
+											HorizontalAlignment="Center">
+						<TextBlock Text='Start:'
+											 Margin='3' />
+						<Slider x:Name='StartSlider'
+										Minimum='20'
+										Maximum='30'
+										MinWidth='100'
+										VerticalAlignment='Center'
+										ToolTip='{Binding Value, ElementName=StartSlider}'
+										SmallChange='1'
+										TickFrequency='2'
+										TickPlacement='BottomRight'
+										Margin='3'
+										IsSnapToTickEnabled='True' />
+						<TextBlock Text='End:'
+											 Margin='3' />
+						<Slider x:Name='EndSlider'
+										Minimum='120'
+										Maximum='150'
+										MinWidth='100'
+										VerticalAlignment='Center'
+										ToolTip='{Binding Value, ElementName=EndSlider}'
+										SmallChange='1'
+										TickFrequency='2'
+										TickPlacement='BottomRight'
+										Margin='3'
+										IsSnapToTickEnabled='True' />
+						<TextBlock Text='Step:' />
+						<Slider x:Name='StepSlider'
+										Minimum='1'
+										Maximum='10'
+										MinWidth='100'
+										VerticalAlignment='Center'
+										ToolTip='{Binding Value, ElementName=StepSlider}'
+										SmallChange='1'
+										TickFrequency='2'
+										TickPlacement='BottomRight'
+										Margin='3'
+										IsSnapToTickEnabled='True' />
+					</StackPanel>
+					<TextBox x:Name="VariableOutputTextBox"
+									 HorizontalAlignment="Stretch"
+									 Margin="10"
+									 TextWrapping="Wrap"
+									 Text=""
+									 VerticalAlignment="Stretch"
+									 IsReadOnly="True"
+									 VerticalScrollBarVisibility='Visible' />
+				
+				</DockPanel>
+			</TabItem>
 			<TabItem Header='Plot'>
 				<DockPanel  LastChildFill="True">
-					
+
 					<StackPanel Orientation="Horizontal"
 											DockPanel.Dock="Bottom"
 											HorizontalAlignment="Center">
 						<Button x:Name="ButtonF"
-										Content="Show Points"/>
+										Content="Show Points" />
 						<Button x:Name="ButtonG"
 										Content="Show Points With Math" />
 
 					</StackPanel>
 					<Canvas DockPanel.Dock='Top'
 									HorizontalAlignment='Stretch'
-									VerticalAlignment='Stretch' Background='LightYellow' x:Name='MainCanvas'>
+									VerticalAlignment='Stretch'
+									Background='LightYellow'
+									x:Name='MainCanvas'>
 
 						<Polyline x:Name="polyline1"
 											Stroke="DarkBlue"
@@ -101,8 +167,8 @@
 											StrokeThickness="3" />
 					</Canvas>
 				</DockPanel>
-					
-					</TabItem>
+
+			</TabItem>
 		</TabControl>
 
 	</DockPanel>

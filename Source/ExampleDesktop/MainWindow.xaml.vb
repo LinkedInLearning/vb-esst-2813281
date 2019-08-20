@@ -6,32 +6,26 @@ Class MainWindow
 	Private Sub ForDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 
 
-		For index = 1 To 10
-			OutputToScreen(index)
-		Next
-
 	End Sub
 
 	Private Sub StepDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
-		For index = 0 To 200 Step 5
-			OutputToScreen(index)
-		Next
+
 
 	End Sub
 
 	Private Sub DownDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
 
-		For index = 100 To 50 Step -5
-			OutputToScreen(index)
-		Next
-
 
 	End Sub
 
-		Private Sub ButtonD_Click(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
+	Private Sub ButtonD_Click(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
+		' variables  can be use for the loop values.
+		For index = StartSlider.Value To EndSlider.Value Step StepSlider.Value
+			OutputToVariableTab(index)
+		Next
 
-		End Sub
+	End Sub
 
 	Private Sub NestedDraw1(sender As Object, e As RoutedEventArgs) Handles ButtonF.Click
 		For x = 100 To 400 Step 30
@@ -53,6 +47,9 @@ Class MainWindow
 	Public Sub OutputToScreen(message As String)
 		OutputTextBox.Text &= message & vbCrLf
 	End Sub
+	Public Sub OutputToVariableTab(message As String)
+		VariableOutputTextBox.Text &= message & vbCrLf
+	End Sub
 
 	Private Sub Clear(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
 		Clear()
@@ -63,5 +60,7 @@ Class MainWindow
 
 	End Sub
 
-
+	Private Sub ButtonClear2_Click(sender As Object, e As RoutedEventArgs) Handles ButtonClear2.Click
+		VariableOutputTextBox.Text = ""
+	End Sub
 End Class
