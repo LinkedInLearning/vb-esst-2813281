@@ -5,7 +5,7 @@ Class MainWindow
 
 	Private Sub AndDemo(sender As Object, e As RoutedEventArgs) Handles ButtonE.Click
 
-		If DayTextBox.Text = "Monday" And TimeTextBox.Text = "3:00" Then
+		If DayTextBox.Text = "Monday" Then
 			PizzaImage.Visibility = Visibility.Visible
 			CouponImage.Visibility = Visibility.Hidden
 			PizzaAwardTextBox.Text += "Free Pizza!" + vbCrLf
@@ -18,7 +18,7 @@ Class MainWindow
 	End Sub
 
 	Private Sub OrDemo(sender As Object, e As RoutedEventArgs) Handles ButtonG.Click
-		If DayTextBox.Text = "Monday" Or TimeTextBox.Text = "3:00" Then
+		If DayTextBox.Text = "Monday" Then
 			PizzaImage.Visibility = Visibility.Visible
 			CouponImage.Visibility = Visibility.Hidden
 			PizzaAwardTextBox.Text += "Free Pizza!" + vbCrLf
