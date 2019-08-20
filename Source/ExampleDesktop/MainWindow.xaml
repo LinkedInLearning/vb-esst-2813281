@@ -33,7 +33,7 @@
 						 Background="#FFECF7FF"
 						 LastChildFill="True">
 		<TabControl>
-			<TabItem Header='Comparison'>
+			<TabItem Header='Select Case'>
 				<DockPanel>
 					<StackPanel Orientation="Horizontal"
 											DockPanel.Dock="Bottom"
@@ -53,8 +53,8 @@
 											DockPanel.Dock="Top"
 											HorizontalAlignment='Stretch'
 											Margin="5">
-						<TextBlock Text='The current random number:' />
-						<TextBlock x:Name="CurrentRandomOutput"
+						<TextBlock Text='The current number in sequence:' />
+						<TextBlock x:Name="CurrentNumberOutput"
 											 HorizontalAlignment="Stretch"
 											 MinWidth='200'
 											 Margin='10,0'
