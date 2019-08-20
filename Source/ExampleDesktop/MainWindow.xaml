@@ -33,7 +33,7 @@
 						 Background="#FFECF7FF"
 						 LastChildFill="True">
 		<TabControl>
-			<TabItem Header='Comparison'>
+			<TabItem Header='For Loop'>
 				<DockPanel>
 					<StackPanel Orientation="Horizontal"
 											DockPanel.Dock="Bottom"
@@ -45,38 +45,24 @@
 											DockPanel.Dock="Bottom"
 											HorizontalAlignment="Center">
 						<Button x:Name="ButtonA"
-										Content="If" />
+										Content="For Loop" />
 						<Button x:Name="ButtonB"
-										Content="If-Else" />
+										Content="Steps" />
 						<Button x:Name="ButtonC"
-										Content="If-ElseIf" />
-						<!--<Button x:Name="ButtonD"
-							Content="Search" />-->
+										Content="Count Down" />
 					</StackPanel>
 					<StackPanel Orientation='Horizontal'
 											DockPanel.Dock="Top"
 											HorizontalAlignment='Stretch'
-											Margin="5">
-						<TextBlock Text='The current random number:' />
-						<TextBlock x:Name="CurrentRandomOutput"
-											 HorizontalAlignment="Stretch"
-											 MinWidth='200'
-											 Margin='10,0'
-											 Text="0"
-											 VerticalAlignment="Stretch" />
-
-					</StackPanel>
+											Margin="5" />
 
 					<Grid>
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width='1*' />
-							<ColumnDefinition Width='1*' />
-							<ColumnDefinition Width='1*' />
+					
 						</Grid.ColumnDefinitions>
 						<DockPanel>
-							<TextBlock Text='Less than 100'
-												 DockPanel.Dock='Top' />
-							<TextBox x:Name="LowNumberOutput"
+							<TextBox x:Name="OutputTextBox"
 											 HorizontalAlignment="Stretch"
 											 Margin="10"
 											 TextWrapping="Wrap"
@@ -85,36 +71,38 @@
 											 IsReadOnly="True"
 											 VerticalScrollBarVisibility='Visible' />
 						</DockPanel>
-						<DockPanel Grid.Column='3'>
-							<TextBlock Text='Greater than 300'
-												 DockPanel.Dock='Top' />
-							<TextBox x:Name="HighNumberOutput"
-											 HorizontalAlignment="Stretch"
-											 Margin="10"
-											 TextWrapping="Wrap"
-											 Text=""
-											 VerticalAlignment="Stretch"
-											 IsReadOnly="True"
-											 VerticalScrollBarVisibility='Visible' />
-						</DockPanel>
-						<DockPanel Grid.Column='1'>
-							<TextBlock Text='Other value'
-												 DockPanel.Dock='Top' />
-							<TextBox x:Name="OtherNumberOutput"
-											 HorizontalAlignment="Stretch"
-											 Margin="40,10"
-											 TextWrapping="Wrap"
-											 Text=""
-											 VerticalAlignment="Stretch"
-											 IsReadOnly="True"
-											 VerticalScrollBarVisibility='Visible'
-											 Grid.Column='2' />
-						</DockPanel>
+						
+						
 					</Grid>
 
 				</DockPanel>
 			</TabItem>
+			<TabItem Header='Plot'>
+				<DockPanel  LastChildFill="True">
+					
+					<StackPanel Orientation="Horizontal"
+											DockPanel.Dock="Bottom"
+											HorizontalAlignment="Center">
+						<Button x:Name="ButtonF"
+										Content="Show Points"/>
+						<Button x:Name="ButtonG"
+										Content="Show Points With Math" />
 
+					</StackPanel>
+					<Canvas DockPanel.Dock='Top'
+									HorizontalAlignment='Stretch'
+									VerticalAlignment='Stretch' Background='LightYellow' x:Name='MainCanvas'>
+
+						<Polyline x:Name="polyline1"
+											Stroke="DarkBlue"
+											StrokeThickness="3" />
+						<Polyline x:Name="polyline2"
+											Stroke="DarkRed"
+											StrokeThickness="3" />
+					</Canvas>
+				</DockPanel>
+					
+					</TabItem>
 		</TabControl>
 
 	</DockPanel>
