@@ -2,7 +2,7 @@
 
 Class MainWindow
 
-	Private Async Sub ForDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+	Private Async Sub DoDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 		Dim engineStatus As Integer
 
 
