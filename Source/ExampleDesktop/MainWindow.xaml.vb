@@ -4,18 +4,24 @@ Imports System.Globalization
 Class MainWindow
 
 	Private Sub ForDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
-
+		For index = 1 To 10
+			OutputToScreen(index)
+		Next
 
 	End Sub
 
 	Private Sub StepDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
-
+		For counter = 21 To 200 Step 5
+			OutputToScreen(counter)
+		Next
 
 	End Sub
 
 	Private Sub DownDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
-
+		For index = 100 To 50 Step -5
+			OutputToScreen(index)
+		Next
 
 	End Sub
 
