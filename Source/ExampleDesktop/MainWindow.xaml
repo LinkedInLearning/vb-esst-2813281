@@ -33,7 +33,7 @@
 						 Background="#FFECF7FF"
 						 LastChildFill="True">
 		<TabControl>
-			<TabItem Header='For Loop'>
+			<TabItem Header='Do Loop'>
 				<DockPanel>
 					<StackPanel Orientation="Horizontal"
 											DockPanel.Dock="Bottom"
@@ -45,11 +45,7 @@
 											DockPanel.Dock="Bottom"
 											HorizontalAlignment="Center">
 						<Button x:Name="ButtonA"
-										Content="For Loop" />
-						<Button x:Name="ButtonB"
-										Content="Steps" />
-						<Button x:Name="ButtonC"
-										Content="Count Down" />
+										Content="Do Loop" />
 					</StackPanel>
 					<StackPanel Orientation='Horizontal'
 											DockPanel.Dock="Top"
@@ -59,51 +55,17 @@
 					<Grid>
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width='1*' />
-					
 						</Grid.ColumnDefinitions>
 						<DockPanel>
-							<TextBox x:Name="OutputTextBox"
+							<ListBox x:Name='OutputList'
 											 HorizontalAlignment="Stretch"
 											 Margin="10"
-											 TextWrapping="Wrap"
-											 Text=""
-											 VerticalAlignment="Stretch"
-											 IsReadOnly="True"
-											 VerticalScrollBarVisibility='Visible' />
+											 VerticalAlignment="Stretch"></ListBox>
+						
 						</DockPanel>
-						
-						
 					</Grid>
-
 				</DockPanel>
 			</TabItem>
-			<TabItem Header='Plot'>
-				<DockPanel  LastChildFill="True">
-					
-					<StackPanel Orientation="Horizontal"
-											DockPanel.Dock="Bottom"
-											HorizontalAlignment="Center">
-						<Button x:Name="ButtonF"
-										Content="Show Points"/>
-						<Button x:Name="ButtonG"
-										Content="Show Points With Math" />
-
-					</StackPanel>
-					<Canvas DockPanel.Dock='Top'
-									HorizontalAlignment='Stretch'
-									VerticalAlignment='Stretch' Background='LightYellow' x:Name='MainCanvas'>
-
-						<Polyline x:Name="polyline1"
-											Stroke="DarkBlue"
-											StrokeThickness="3" />
-						<Polyline x:Name="polyline2"
-											Stroke="DarkRed"
-											StrokeThickness="3" />
-					</Canvas>
-				</DockPanel>
-					
-					</TabItem>
 		</TabControl>
-
 	</DockPanel>
 </Window>

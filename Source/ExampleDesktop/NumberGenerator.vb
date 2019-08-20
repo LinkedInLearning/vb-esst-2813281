@@ -1,7 +1,7 @@
 ﻿Module NumberGenerator
 
 	Public Function GetRandomOddNumber(maxValue As Integer) As Integer
-		
+
 		Return GetOddOrEven(GetRandomNumber(maxValue), True)
 
 	End Function
@@ -30,6 +30,14 @@
 	Private Function GetRandomNumber(maxValue As Integer) As Integer
 		Dim ran = New Random
 		Dim candidate As Integer = ran.Next(maxValue:=maxValue)
+		Return candidate
+	End Function
+
+	Dim _ran = New Random
+
+	Public Async Function GetEngineStatus() As Task(Of Integer)
+		Await Task.Delay(1)
+		Dim candidate As Integer = _ran.Next(minValue:=-1, maxValue:=200)
 		Return candidate
 	End Function
 End Module
