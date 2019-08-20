@@ -4,12 +4,30 @@ Class MainWindow
 
 	Private Async Sub ForDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 		Dim engineStatus As Integer
+
+
+
+	End Sub
+	Public Sub EndLessLoop()
 		Do
 
-			engineStatus = Await GetEngineStatus()
-			OutputToScreen(engineStatus)
-		Loop While engineStatus >= 0
+		Loop While True
+		'--------------
 
+		Do
+
+		Loop Until True
+		'--------------
+
+		Do While True
+
+		Loop
+		'--------------
+
+		Do Until True
+
+		Loop
+		'--------------
 	End Sub
 
 	Public Sub OutputToScreen(message As String)
