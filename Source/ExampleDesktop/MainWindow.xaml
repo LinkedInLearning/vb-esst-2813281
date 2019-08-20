@@ -45,11 +45,7 @@
 											DockPanel.Dock="Bottom"
 											HorizontalAlignment="Center">
 						<Button x:Name="ButtonA"
-										Content="If" />
-						<Button x:Name="ButtonB"
-										Content="If-Else" />
-						<Button x:Name="ButtonC"
-										Content="If-ElseIf" />
+										Content="Select Case" />
 						<!--<Button x:Name="ButtonD"
 							Content="Search" />-->
 					</StackPanel>
@@ -64,7 +60,6 @@
 											 Margin='10,0'
 											 Text="0"
 											 VerticalAlignment="Stretch" />
-
 					</StackPanel>
 
 					<Grid>
@@ -72,11 +67,40 @@
 							<ColumnDefinition Width='1*' />
 							<ColumnDefinition Width='1*' />
 							<ColumnDefinition Width='1*' />
+							<ColumnDefinition Width='2*' />
+							<ColumnDefinition Width='1*' />
+							<ColumnDefinition Width='1*' />
 						</Grid.ColumnDefinitions>
 						<DockPanel>
-							<TextBlock Text='Less than 100'
+							<TextBlock Text='Case: 1 to 3'
 												 DockPanel.Dock='Top' />
-							<TextBox x:Name="LowNumberOutput"
+							<TextBox x:Name="Text1"
+											 HorizontalAlignment="Stretch"
+											 Margin="10"
+											 TextWrapping="Wrap"
+											 Text=""
+											 VerticalAlignment="Stretch"
+											 IsReadOnly="True"
+											 VerticalScrollBarVisibility='Visible' />
+						</DockPanel>
+
+						<DockPanel Grid.Column='1'>
+							<TextBlock Text='Case: 5,7,9'
+												 DockPanel.Dock='Top' />
+							<TextBox x:Name="Text2"
+											 HorizontalAlignment="Stretch"
+											 Margin="10"
+											 TextWrapping="Wrap"
+											 Text=""
+											 VerticalAlignment="Stretch"
+											 IsReadOnly="True"
+											 VerticalScrollBarVisibility='Visible'
+											 Grid.Column='2' />
+						</DockPanel>
+						<DockPanel Grid.Column='2'>
+							<TextBlock Text='Case: 4,6,8'
+												 DockPanel.Dock='Top' />
+							<TextBox x:Name="Text3"
 											 HorizontalAlignment="Stretch"
 											 Margin="10"
 											 TextWrapping="Wrap"
@@ -86,9 +110,9 @@
 											 VerticalScrollBarVisibility='Visible' />
 						</DockPanel>
 						<DockPanel Grid.Column='3'>
-							<TextBlock Text='Greater than 300'
+							<TextBlock Text='Case: 10 To 15, 17 To 19'
 												 DockPanel.Dock='Top' />
-							<TextBox x:Name="HighNumberOutput"
+							<TextBox x:Name="Text4"
 											 HorizontalAlignment="Stretch"
 											 Margin="10"
 											 TextWrapping="Wrap"
@@ -97,25 +121,33 @@
 											 IsReadOnly="True"
 											 VerticalScrollBarVisibility='Visible' />
 						</DockPanel>
-						<DockPanel Grid.Column='1'>
-							<TextBlock Text='Other value'
+						<DockPanel Grid.Column='4'>
+							<TextBlock Text='Case: Is &lt; 30'
 												 DockPanel.Dock='Top' />
-							<TextBox x:Name="OtherNumberOutput"
+							<TextBox x:Name="Text5"
 											 HorizontalAlignment="Stretch"
-											 Margin="40,10"
+											 Margin="10"
 											 TextWrapping="Wrap"
 											 Text=""
 											 VerticalAlignment="Stretch"
 											 IsReadOnly="True"
-											 VerticalScrollBarVisibility='Visible'
-											 Grid.Column='2' />
+											 VerticalScrollBarVisibility='Visible' />
+						</DockPanel>
+						<DockPanel Grid.Column='5'>
+							<TextBlock Text='Case Else'
+												 DockPanel.Dock='Top' />
+							<TextBox x:Name="text6"
+											 HorizontalAlignment="Stretch"
+											 Margin="10"
+											 TextWrapping="Wrap"
+											 Text=""
+											 VerticalAlignment="Stretch"
+											 IsReadOnly="True"
+											 VerticalScrollBarVisibility='Visible' />
 						</DockPanel>
 					</Grid>
-
 				</DockPanel>
 			</TabItem>
-
 		</TabControl>
-
 	</DockPanel>
 </Window>

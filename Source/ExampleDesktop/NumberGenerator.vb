@@ -1,5 +1,10 @@
 ﻿Module NumberGenerator
+	Private _counter As Integer = 0
+	Public function GetNextNumber()
+		_counter +=1
+		Return _counter
 
+	End function
 	Public Function GetRandomOddNumber(maxValue As Integer) As Integer
 		
 		Return GetOddOrEven(GetRandomNumber(maxValue), True)

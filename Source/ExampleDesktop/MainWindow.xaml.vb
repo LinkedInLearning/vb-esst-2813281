@@ -1,28 +1,28 @@
 ﻿Option Strict Off
-Imports System.Globalization
 
 Class MainWindow
 
 	Private Sub IfDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
-		Dim odd = GetRandomOddNumber(401)
-		CurrentRandomOutput.Text = odd
+		Dim currentNumber = GetNextNumber()
 
-
-
-	End Sub
-
-	Private Sub IfElseDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
-		Dim odd = GetRandomOddNumber(401)
-
-
-	End Sub
-
-	Private Sub IfElseIfDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
-		Dim databaseName As String = "db400"
-		Dim odd = GetRandomOddNumber(401)
-		CurrentRandomOutput.Text = odd
-
-
+		CurrentRandomOutput.Text = currentNumber
+		' game rules
+		' 1-10 = $50.00
+		' 90-100 =
+		Select Case currentNumber
+			Case 1 To 3
+				Text1.Text &= currentNumber & vbCrLf
+			Case 5, 7, 9
+				Text2.Text &= currentNumber & vbCrLf
+			Case 4, 6, 8
+				Text3.Text &= currentNumber & vbCrLf
+			Case 10 To 15, 17 To 19
+				Text4.Text &= currentNumber & vbCrLf
+			Case Is < 30
+				Text5.Text &= currentNumber & vbCrLf
+			Case Else
+				text6.Text &= currentNumber & vbCrLf
+		End Select
 
 	End Sub
 
@@ -31,14 +31,12 @@ Class MainWindow
 	End Sub
 
 	Private Sub Clear()
-		LowNumberOutput.Text = ""
-		HighNumberOutput.Text = ""
-		OtherNumberOutput.Text = ""
+		Text1.Text = ""
+		Text2.Text = ""
+		Text3.Text = ""
+		Text4.Text = ""
+		Text5.Text = ""
+		text6.Text = ""
 	End Sub
-
-
-
-
-
 
 End Class
