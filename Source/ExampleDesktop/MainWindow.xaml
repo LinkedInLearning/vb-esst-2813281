@@ -46,10 +46,11 @@
 											HorizontalAlignment="Center">
 						<Button x:Name="ButtonA"
 										Content="List (Of String)" />
-						<Button x:Name="ButtonC"
-										Content="WPF Binding" />
+						
 						<Button x:Name="ButtonB"
 										Content="List (Of Integer)" />
+						<Button x:Name="ButtonC"
+										Content="WPF Binding" />
 					</StackPanel>
 					<StackPanel Orientation='Horizontal'
 											DockPanel.Dock="Top"
