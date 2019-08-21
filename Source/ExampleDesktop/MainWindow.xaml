@@ -45,12 +45,14 @@
 											DockPanel.Dock="Bottom"
 											HorizontalAlignment="Center">
 						<Button x:Name="ButtonA"
-										Content="List (Of String)" />
+										Content="Reverse" />
 						
 						<Button x:Name="ButtonB"
-										Content="List (Of Integer)" />
+										Content="Sort" />
 						<Button x:Name="ButtonC"
-										Content="WPF Binding" />
+										Content="Convert" />
+						<Button x:Name="ButtonD"
+										Content="FindAll" />
 					</StackPanel>
 					<StackPanel Orientation='Horizontal'
 											DockPanel.Dock="Top"
@@ -61,13 +63,21 @@
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width='1*' />
 						</Grid.ColumnDefinitions>
-						<DockPanel>
-							<ListBox x:Name='OutputList'
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width='1*' />
+								<ColumnDefinition Width='1*' />
+							</Grid.ColumnDefinitions>
+							<ListBox x:Name='OrginalList'
 											 HorizontalAlignment="Stretch"
 											 Margin="10"
 											 VerticalAlignment="Stretch"></ListBox>
+							<ListBox x:Name='ModifiedList'
+											 HorizontalAlignment="Stretch"
+											 Margin="10"
+											 VerticalAlignment="Stretch" Grid.Column='1'></ListBox>
 
-						</DockPanel>
+						</Grid>
 					</Grid>
 				</DockPanel>
 			</TabItem>

@@ -40,4 +40,14 @@
 		Dim candidate As Integer = _ran.Next(minValue:=-1, maxValue:=200)
 		Return candidate
 	End Function
+
+	Public Function GetOddNumbersList(listCount As Integer) As List(Of Integer)
+		Dim temp = New List(Of Integer)
+		For index = 1 To listCount
+			temp.Add(GetRandomOddNumber(201))
+
+		Next
+		Return temp
+	End Function
+
 End Module

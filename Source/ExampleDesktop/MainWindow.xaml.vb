@@ -5,42 +5,87 @@ Class MainWindow
 
 
 
-	Private Sub ListOfStringsDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+	Private Sub ReverseDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 
-		Dim colorNames As New List(Of String)
+		' create a function that returns 
+		' a List( Of Integer)
+		Dim oddNumbers = GetOddNumbersList(15)
 
-		colorNames.Add("Scarlet")
-		colorNames.Add("Magenta")
-		colorNames.Insert(0, "Blue")
-		colorNames.AddRange({"Green", "Lavender"})
-
-		For Each color In colorNames
-			OutputList.Items.Add(color)
-		Next
-
-
-	End Sub
-
-	Private Sub BindingDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
-		Dim compassPoints As New List(Of String)({"North", "East", "South", "West"})
-		OutputList.ItemsSource = compassPoints
-	End Sub
-	Private Sub ListOfIntegersDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
-
-		Dim oddNumbers = New List(Of Integer)
-		For index = 1 To 30
-			oddNumbers.Add(GetRandomOddNumber(201))
-
-		Next
 
 		For Each number In oddNumbers
-			OutputList.Items.Add($"{number.ToString("D3")} * 4 = {(number * 4).ToString("D3")}")
+			OrginalList.Items.Add(number)
+
 		Next
+		oddNumbers.Reverse()
+
+		For Each number In oddNumbers
+			ModifiedList.Items.Add(number)
+
+		Next
+
+
 
 	End Sub
 
+
+	Private Sub SortDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
+
+		Dim oddNumbers = GetOddNumbersList(15)
+
+
+		For Each number In oddNumbers
+			OrginalList.Items.Add(number)
+
+		Next
+		oddNumbers.Sort()
+
+		For Each number In oddNumbers
+			ModifiedList.Items.Add(number)
+
+		Next
+
+
+
+	End Sub
+
+	Private Sub OtherDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+		Dim oddNumbers = GetOddNumbersList(15)
+
+		Dim oddStrings = oddNumbers.ConvertAll(Of String)(Function(x) Integer.Parse(x))
+
+		For Each number In oddNumbers
+			OrginalList.Items.Add(number)
+
+		Next
+		oddNumbers.Sort()
+
+		For Each number In oddStrings
+			ModifiedList.Items.Add(number)
+
+		Next
+	End Sub
+
+	Private Sub FindDemo(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
+		Dim oddNumbers = GetOddNumbersList(100)
+		Dim foundNumbers = oddNumbers.FindAll(Function(x) x > 50 And x < 100)
+		oddNumbers.Sort()
+		foundNumbers.Sort()
+
+		For Each number In oddNumbers
+			OrginalList.Items.Add(number)
+
+		Next
+		oddNumbers.Sort()
+
+		For Each number In foundNumbers
+			ModifiedList.Items.Add(number)
+
+		Next
+	End Sub
+
+#Region "Output"
 	Public Sub OutputToScreen(message As String)
-		OutputList.Items.Insert(0, message)
+
 	End Sub
 
 	Private Sub Clear(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
@@ -48,10 +93,13 @@ Class MainWindow
 	End Sub
 
 	Private Sub Clear()
-		OutputList.ItemsSource = Nothing
-		OutputList.Items.Clear()
+		ModifiedList.ItemsSource = Nothing
+		ModifiedList.Items.Clear()
+
+		OrginalList.ItemsSource = Nothing
+		OrginalList.Items.Clear()
 
 	End Sub
 
-
+#End Region
 End Class
