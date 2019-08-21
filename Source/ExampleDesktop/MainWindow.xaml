@@ -1,4 +1,4 @@
-﻿ <Window x:Class="MainWindow"
+﻿<Window x:Class="MainWindow"
 				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -33,7 +33,7 @@
 						 Background="#FFECF7FF"
 						 LastChildFill="True">
 		<TabControl>
-			<TabItem Header='List, Add, remove and interact'>
+			<TabItem Header='Interate'>
 				<DockPanel>
 					<StackPanel Orientation="Horizontal"
 											DockPanel.Dock="Bottom"
@@ -46,9 +46,10 @@
 											HorizontalAlignment="Center">
 						<Button x:Name="ButtonA"
 										Content="List (Of String)" />
+						<Button x:Name="ButtonC"
+										Content="WPF Binding" />
 						<Button x:Name="ButtonB"
-										Content="List (Of Integer)
-" />
+										Content="List (Of Integer)" />
 					</StackPanel>
 					<StackPanel Orientation='Horizontal'
 											DockPanel.Dock="Top"
@@ -64,7 +65,7 @@
 											 HorizontalAlignment="Stretch"
 											 Margin="10"
 											 VerticalAlignment="Stretch"></ListBox>
-						
+
 						</DockPanel>
 					</Grid>
 				</DockPanel>

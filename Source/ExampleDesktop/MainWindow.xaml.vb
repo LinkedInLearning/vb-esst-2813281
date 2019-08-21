@@ -14,8 +14,16 @@ Class MainWindow
 		colorNames.Insert(0, "Blue")
 		colorNames.AddRange({"Green", "Lavender"})
 
+		For Each color In colorNames
+			OutputList.Items.Add(color)
+		Next
 
 
+	End Sub
+
+	Private Sub BindingDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+		Dim compassPoints As New List(Of String)({"North", "East", "South", "West"})
+		OutputList.ItemsSource = compassPoints
 	End Sub
 	Private Sub ListOfIntegersDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
@@ -23,6 +31,10 @@ Class MainWindow
 		For index = 1 To 30
 			oddNumbers.Add(GetRandomOddNumber(201))
 
+		Next
+
+		For Each number In oddNumbers
+			OutputList.Items.Add($"{number.ToString("D3")} * 4 = {(number * 4).ToString("D3")}")
 		Next
 
 	End Sub
@@ -36,8 +48,10 @@ Class MainWindow
 	End Sub
 
 	Private Sub Clear()
+		OutputList.ItemsSource = Nothing
 		OutputList.Items.Clear()
 
 	End Sub
+
 
 End Class
