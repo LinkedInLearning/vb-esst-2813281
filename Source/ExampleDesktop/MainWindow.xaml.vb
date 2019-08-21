@@ -2,13 +2,9 @@
 
 Class MainWindow
 
-	Private Async Sub ForDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
-		Dim engineStatus As Integer
-		Do
-
-			engineStatus = Await GetEngineStatus()
-			OutputToScreen(engineStatus)
-		Loop While engineStatus >= 0
+	Private Async Sub NewDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+	
+	
 
 	End Sub
 
