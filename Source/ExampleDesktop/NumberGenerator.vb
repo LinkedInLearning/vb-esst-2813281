@@ -28,8 +28,8 @@
 	End Function
 
 	Private Function GetRandomNumber(maxValue As Integer) As Integer
-		Dim ran = New Random
-		Dim candidate As Integer = ran.Next(maxValue:=maxValue)
+
+		Dim candidate As Integer = _ran.Next(maxValue:=maxValue)
 		Return candidate
 	End Function
 

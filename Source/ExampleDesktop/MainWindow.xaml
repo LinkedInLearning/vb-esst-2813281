@@ -33,7 +33,7 @@
 						 Background="#FFECF7FF"
 						 LastChildFill="True">
 		<TabControl>
-			<TabItem Header='Arrays and Listsp'>
+			<TabItem Header='List, Add, remove and interact'>
 				<DockPanel>
 					<StackPanel Orientation="Horizontal"
 											DockPanel.Dock="Bottom"
@@ -44,8 +44,13 @@
 					<StackPanel Orientation="Horizontal"
 											DockPanel.Dock="Bottom"
 											HorizontalAlignment="Center">
+						<Button x:Name="ButtonC"
+										Content="Initialize" />
 						<Button x:Name="ButtonA"
-										Content="Create New" />
+										Content="List (Of String)" />
+						<Button x:Name="ButtonB"
+										Content="List (Of Integer)
+" />
 					</StackPanel>
 					<StackPanel Orientation='Horizontal'
 											DockPanel.Dock="Top"
