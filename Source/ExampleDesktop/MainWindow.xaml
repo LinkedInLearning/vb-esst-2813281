@@ -44,8 +44,6 @@
 					<StackPanel Orientation="Horizontal"
 											DockPanel.Dock="Bottom"
 											HorizontalAlignment="Center">
-						<Button x:Name="ButtonC"
-										Content="Initialize" />
 						<Button x:Name="ButtonA"
 										Content="List (Of String)" />
 						<Button x:Name="ButtonB"
