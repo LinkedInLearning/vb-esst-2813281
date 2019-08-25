@@ -68,7 +68,7 @@
 								<ColumnDefinition Width='1*' />
 								<ColumnDefinition Width='1*' />
 							</Grid.ColumnDefinitions>
-							<ListBox x:Name='OrginalList'
+							<ListBox x:Name='OriginalList'
 											 HorizontalAlignment="Stretch"
 											 Margin="10"
 											 VerticalAlignment="Stretch"></ListBox>
