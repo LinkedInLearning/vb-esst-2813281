@@ -7,23 +7,18 @@ Class MainWindow
 
 	Private Sub ReverseDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 
-		' create a function that returns 
-		' a List( Of Integer)
-		Dim oddNumbers = GetOddNumbersList(15)
+		' LINQ provides tools for querying lists of data 
+		' The Enumerable class is key to query actions.
 
 
-		For Each number In oddNumbers
-			OrginalList.Items.Add(number)
+		' get a range of integers
 
-		Next
-		oddNumbers.Reverse()
+		Dim numbers = Enumerable.Range(100, 300).ToList()
 
-		For Each number In oddNumbers
-			ModifiedList.Items.Add(number)
+		' use Enumerable extension methods to query the numbers list
 
-		Next
-
-
+		Dim total = numbers.Sum
+		riginal
 
 	End Sub
 
@@ -49,20 +44,7 @@ Class MainWindow
 	End Sub
 
 	Private Sub OtherDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
-		Dim oddNumbers = GetOddNumbersList(15)
 
-		Dim oddStrings = oddNumbers.ConvertAll(Of String)(Function(x) Integer.Parse(x))
-
-		For Each number In oddNumbers
-			OrginalList.Items.Add(number)
-
-		Next
-		oddNumbers.Sort()
-
-		For Each number In oddStrings
-			ModifiedList.Items.Add(number)
-
-		Next
 	End Sub
 
 	Private Sub FindDemo(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
