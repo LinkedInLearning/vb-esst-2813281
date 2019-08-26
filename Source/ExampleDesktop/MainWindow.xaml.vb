@@ -11,10 +11,14 @@ Class MainWindow
 	End Sub
 
 
-	Private Sub WhereDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
+	Private Sub HandledDemo1(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
 
-
+		Try
+			ErrorMaker.OpenFile("c:\nofile.txt")
+		Catch ex As Exception
+			MessageBox.Show("Cannot find the file 'c:\nofile.txt',  select another file and try again.")
+		End Try
 
 	End Sub
 
