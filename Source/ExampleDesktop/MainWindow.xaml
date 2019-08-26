@@ -45,14 +45,14 @@
 											DockPanel.Dock="Bottom"
 											HorizontalAlignment="Center">
 						<Button x:Name="ButtonA"
-										Content="Enumerable class" />
+										Content="SortedSet class" />
 						
 						<Button x:Name="ButtonB"
-										Content="Where" />
+										Content="Add to Sorted" />
 						<Button x:Name="ButtonC"
-										Content="OrderBy" />
+										Content="Add five to Queue" />
 						<Button x:Name="ButtonD"
-										Content="Number" />
+										Content="Dequeue" />
 					</StackPanel>
 					<StackPanel Orientation='Horizontal'
 											DockPanel.Dock="Top"

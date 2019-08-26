@@ -3,60 +3,45 @@
 Class MainWindow
 
 
+	Private _ran As Random = New Random
+	Private _doubleSet As SortedSet(Of Double) = New SortedSet(Of Double)
+	Private _queueOfInts As Queue(Of Integer) = New Queue(Of Integer)
+	Private Sub SortedSetDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+
+		_doubleSet = New Collections.Generic.SortedSet(Of Double)({3.3, 1.1, 4.4, 2.2, 5.5, 9.9, 8.8, 7.7, 6.6})
+		OriginalList.ItemsSource = _doubleSet
 
 
-	Private Sub EnumerableDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 
-		' LINQ provides tools for querying lists of data 
-		' The Enumerable class is key to query actions.
-
-
-		' get a range of integers
-
-		Dim numbers = Enumerable.Range(100, 300).ToList()
-
-		' use Enumerable extension methods to query the numbers list
-
-		Dim total = numbers.Sum
-		OriginalList.Items.Add(total)
 
 	End Sub
 
 
 	Private Sub WhereDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
+		Clear()
+		Dim newDouble = _ran.NextDouble() * 10
+		newDouble = Math.Round(newDouble, 2)
+		_doubleSet.Add(newDouble)
 
-		' where
-		Dim integerList = Enumerable.Range(1, 300).ToList()
-
-		Dim listOf25s = integerList.Where(Function(x) x Mod 25 = 0 Or x < 10)
-
-		OriginalList.ItemsSource = integerList
-		ModifiedList.ItemsSource = listOf25s
-
+		OriginalList.ItemsSource = _doubleSet
 
 	End Sub
 
-	Private Sub OrderByDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+	Private Sub AddFiveDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+		ClearOriginal()
 
+		For counter = 1 To 5
 
-		Dim words = New List(Of String)({"aa-5-aa", "bb-1-bb", "rr-6-rr", "zz-3-zz"})
-		Dim orderedWords = words.OrderBy(Of String)(Function(x) x.Chars(3))
+			_queueOfInts.Enqueue(_ran.Next(1, 20))
+		Next
 
-
-		OriginalList.ItemsSource = words
-		ModifiedList.ItemsSource = orderedWords
-
+		OriginalList.ItemsSource = _queueOfInts
 	End Sub
 
-	Private Sub FindDemo(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
-		Dim doubleList = New List(Of Double)({3.3, 4.4, 1.1, 2.2, 5.5, 8.8, 9.9, 6.6, 7.7})
-		Dim lastNumber = doubleList.Last()
-
-		Dim maxValue = doubleList.Max
-
-		OriginalList.ItemsSource = doubleList
-		ModifiedList.Items.Add($"last number in list: {lastNumber}")
-		ModifiedList.Items.Add($"Highest number in list: {maxValue}")
+	Private Sub DequeueDemo(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
+		ClearOriginal()
+		ModifiedList.Items.Add(_queueOfInts.Dequeue)
+		OriginalList.ItemsSource = _queueOfInts
 
 	End Sub
 
@@ -72,6 +57,13 @@ Class MainWindow
 	Private Sub Clear()
 		ModifiedList.ItemsSource = Nothing
 		ModifiedList.Items.Clear()
+
+		OriginalList.ItemsSource = Nothing
+		OriginalList.Items.Clear()
+
+	End Sub
+	Private Sub ClearOriginal()
+
 
 		OriginalList.ItemsSource = Nothing
 		OriginalList.Items.Clear()
