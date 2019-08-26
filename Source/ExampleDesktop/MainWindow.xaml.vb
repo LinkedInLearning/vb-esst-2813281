@@ -5,7 +5,7 @@ Class MainWindow
 
 	Private Sub InitializeList(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
 		Dim colorNames As New List(Of String)
-		Dim colorNames2 = New List(Of String)({"green", "orange", "red"})
+		Dim colorNames2 = New List(Of String)
 	End Sub
 
 	Private Sub ListOfStringsDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
@@ -13,15 +13,6 @@ Class MainWindow
 		Dim colorNames As New List(Of String)
 
 
-		colorNames.Add("Scarlet")
-		colorNames.Add("Magenta")
-		colorNames.Insert(0, "Blue")
-		colorNames.AddRange({"Green", "Lavender"})
-
-		Dim colorName As String = colorNames.Item(0)
-
-		colorNames.Remove("Magenta")
-		colorNames.RemoveAt(1)
 
 
 	End Sub
@@ -32,11 +23,10 @@ Class MainWindow
 			oddNumbers.Add(GetRandomOddNumber(201))
 
 		Next
-		Dim odd As Integer = oddNumbers(4)
 
-		oddNumbers.RemoveAll(Function(x) x < 100)
 	End Sub
 
+#Region "Output"
 	Public Sub OutputToScreen(message As String)
 		OutputList.Items.Insert(0, message)
 	End Sub
@@ -49,5 +39,5 @@ Class MainWindow
 		OutputList.Items.Clear()
 
 	End Sub
-
+#End Region
 End Class
