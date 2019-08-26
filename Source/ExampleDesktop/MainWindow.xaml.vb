@@ -5,7 +5,7 @@ Class MainWindow
 
 
 
-	Private Sub ReverseDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+	Private Sub EnumerableDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 
 		' LINQ provides tools for querying lists of data 
 		' The Enumerable class is key to query actions.
@@ -18,51 +18,46 @@ Class MainWindow
 		' use Enumerable extension methods to query the numbers list
 
 		Dim total = numbers.Sum
-		riginal
+		OriginalList.Items.Add(total)
 
 	End Sub
 
 
-	Private Sub SortDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
+	Private Sub WhereDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
-		Dim oddNumbers = GetOddNumbersList(15)
+		' where
+		Dim integerList = Enumerable.Range(1, 300).ToList()
 
+		Dim listOf25s = integerList.Where(Function(x) x Mod 25 = 0 Or x < 10)
 
-		For Each number In oddNumbers
-			OrginalList.Items.Add(number)
-
-		Next
-		oddNumbers.Sort()
-
-		For Each number In oddNumbers
-			ModifiedList.Items.Add(number)
-
-		Next
-
+		OriginalList.ItemsSource = integerList
+		ModifiedList.ItemsSource = listOf25s
 
 
 	End Sub
 
-	Private Sub OtherDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+	Private Sub OrderByDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+
+
+		Dim words = New List(Of String)({"aa-5-aa", "bb-1-bb", "rr-6-rr", "zz-3-zz"})
+		Dim orderedWords = words.OrderBy(Of String)(Function(x) x.Chars(3))
+
+
+		OriginalList.ItemsSource = words
+		ModifiedList.ItemsSource = orderedWords
 
 	End Sub
 
 	Private Sub FindDemo(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
-		Dim oddNumbers = GetOddNumbersList(100)
-		Dim foundNumbers = oddNumbers.FindAll(Function(x) x > 50 And x < 100)
-		oddNumbers.Sort()
-		foundNumbers.Sort()
+		Dim doubleList = New List(Of Double)({3.3, 4.4, 1.1, 2.2, 5.5, 8.8, 9.9, 6.6, 7.7})
+		Dim lastNumber = doubleList.Last()
 
-		For Each number In oddNumbers
-			OrginalList.Items.Add(number)
+		Dim maxValue = doubleList.Max
 
-		Next
-		oddNumbers.Sort()
+		OriginalList.ItemsSource = doubleList
+		ModifiedList.Items.Add($"last number in list: {lastNumber}")
+		ModifiedList.Items.Add($"Highest number in list: {maxValue}")
 
-		For Each number In foundNumbers
-			ModifiedList.Items.Add(number)
-
-		Next
 	End Sub
 
 #Region "Output"
@@ -78,8 +73,8 @@ Class MainWindow
 		ModifiedList.ItemsSource = Nothing
 		ModifiedList.Items.Clear()
 
-		OrginalList.ItemsSource = Nothing
-		OrginalList.Items.Clear()
+		OriginalList.ItemsSource = Nothing
+		OriginalList.Items.Clear()
 
 	End Sub
 

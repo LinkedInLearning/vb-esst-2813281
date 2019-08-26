@@ -33,7 +33,7 @@
 						 Background="#FFECF7FF"
 						 LastChildFill="True">
 		<TabControl>
-			<TabItem Header='Interate'>
+			<TabItem Header='Linq'>
 				<DockPanel>
 					<StackPanel Orientation="Horizontal"
 											DockPanel.Dock="Bottom"
@@ -48,11 +48,11 @@
 										Content="Enumerable class" />
 						
 						<Button x:Name="ButtonB"
-										Content="Sort" />
+										Content="Where" />
 						<Button x:Name="ButtonC"
-										Content="Convert" />
+										Content="OrderBy" />
 						<Button x:Name="ButtonD"
-										Content="FindAll" />
+										Content="Number" />
 					</StackPanel>
 					<StackPanel Orientation='Horizontal'
 											DockPanel.Dock="Top"
