@@ -7,7 +7,7 @@
 				mc:Ignorable="d"
 				Title="Code Explorer"
 				Height="800"
-				Width="1000"
+				Width="1200"
 				FontSize="24"
 				WindowState='Maximized'>
 	<Window.Resources>
@@ -33,7 +33,7 @@
 						 Background="#FFECF7FF"
 						 LastChildFill="True">
 		<TabControl>
-			<TabItem Header='Linq'>
+			<TabItem Header='What Happens'>
 				<DockPanel>
 					<StackPanel Orientation="Horizontal"
 											DockPanel.Dock="Bottom"
@@ -45,14 +45,14 @@
 											DockPanel.Dock="Bottom"
 											HorizontalAlignment="Center">
 						<Button x:Name="ButtonA"
-										Content="Enumerable class" />
+										Content="Unhandled File Error" />
 						
 						<Button x:Name="ButtonB"
-										Content="Where" />
+										Content="Handled " />
 						<Button x:Name="ButtonC"
-										Content="OrderBy" />
+										Content="Unhandled Division error" />
 						<Button x:Name="ButtonD"
-										Content="Number" />
+										Content="Handled" />
 					</StackPanel>
 					<StackPanel Orientation='Horizontal'
 											DockPanel.Dock="Top"

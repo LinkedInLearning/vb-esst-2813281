@@ -6,58 +6,39 @@ Class MainWindow
 
 
 	Private Sub EnumerableDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
-
-		' LINQ provides tools for querying lists of data 
-		' The Enumerable class is key to query actions.
-
-
-		' get a range of integers
-
-		Dim numbers = Enumerable.Range(100, 300).ToList()
-
-		' use Enumerable extension methods to query the numbers list
-
-		Dim total = numbers.Sum
-		OriginalList.Items.Add(total)
+		ErrorMaker.OpenFile("c:\nofile.txt")
 
 	End Sub
 
 
 	Private Sub WhereDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
-		' where
-		Dim integerList = Enumerable.Range(1, 300).ToList()
 
-		Dim listOf25s = integerList.Where(Function(x) x Mod 25 = 0 Or x < 10)
-
-		OriginalList.ItemsSource = integerList
-		ModifiedList.ItemsSource = listOf25s
 
 
 	End Sub
 
 	Private Sub OrderByDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+		Dim number As Integer = 7
 
+		Dim result As Integer
 
-		Dim words = New List(Of String)({"aa-5-aa", "bb-1-bb", "rr-6-rr", "zz-3-zz"})
-		Dim orderedWords = words.OrderBy(Of String)(Function(x) x.Chars(3))
+		result = number / 0
 
-
-		OriginalList.ItemsSource = words
-		ModifiedList.ItemsSource = orderedWords
 
 	End Sub
 
 	Private Sub FindDemo(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
-		Dim doubleList = New List(Of Double)({3.3, 4.4, 1.1, 2.2, 5.5, 8.8, 9.9, 6.6, 7.7})
-		Dim lastNumber = doubleList.Last()
 
-		Dim maxValue = doubleList.Max
+		Try
+			Dim number As Integer = 7
 
-		OriginalList.ItemsSource = doubleList
-		ModifiedList.Items.Add($"last number in list: {lastNumber}")
-		ModifiedList.Items.Add($"Highest number in list: {maxValue}")
+			Dim result As Integer
 
+			result = number / 0
+		Catch ex As Exception
+			MessageBox.Show("Cannot divide by zero,  select another number and try again.")
+		End Try
 	End Sub
 
 #Region "Output"
