@@ -14,17 +14,13 @@ Class MainWindow
 		colorNames.Insert(0, "Blue")
 		colorNames.AddRange({"Green", "Lavender"})
 
-		For Each color In colorNames
-			OutputList.Items.Add(color)
-		Next
+		' Use For Each to loop through a collection
+
 
 
 	End Sub
 
-	Private Sub BindingDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
-		Dim compassPoints As New List(Of String)({"North", "East", "South", "West"})
-		OutputList.ItemsSource = compassPoints
-	End Sub
+
 	Private Sub ListOfIntegersDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
 		Dim oddNumbers = New List(Of Integer)
@@ -37,6 +33,11 @@ Class MainWindow
 			OutputList.Items.Add($"{number.ToString("D3")} * 4 = {(number * 4).ToString("D3")}")
 		Next
 
+	End Sub
+
+	Private Sub BindingDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+		Dim compassPoints As New List(Of String)({"North", "East", "South", "West"})
+		OutputList.ItemsSource = compassPoints
 	End Sub
 
 	Public Sub OutputToScreen(message As String)
