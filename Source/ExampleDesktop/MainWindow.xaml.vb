@@ -13,7 +13,7 @@ Class MainWindow
 
 
 		For Each number In oddNumbers
-			OrginalList.Items.Add(number)
+			OriginalList.Items.Add(number)
 
 		Next
 		oddNumbers.Reverse()
@@ -34,7 +34,7 @@ Class MainWindow
 
 
 		For Each number In oddNumbers
-			OrginalList.Items.Add(number)
+			OriginalList.Items.Add(number)
 
 		Next
 		oddNumbers.Sort()
@@ -54,7 +54,7 @@ Class MainWindow
 		Dim oddStrings = oddNumbers.ConvertAll(Of String)(Function(x) Integer.Parse(x))
 
 		For Each number In oddNumbers
-			OrginalList.Items.Add(number)
+			OriginalList.Items.Add(number)
 
 		Next
 		oddNumbers.Sort()
@@ -72,7 +72,7 @@ Class MainWindow
 		foundNumbers.Sort()
 
 		For Each number In oddNumbers
-			OrginalList.Items.Add(number)
+			OriginalList.Items.Add(number)
 
 		Next
 		oddNumbers.Sort()
@@ -96,8 +96,8 @@ Class MainWindow
 		ModifiedList.ItemsSource = Nothing
 		ModifiedList.Items.Clear()
 
-		OrginalList.ItemsSource = Nothing
-		OrginalList.Items.Clear()
+		OriginalList.ItemsSource = Nothing
+		OriginalList.Items.Clear()
 
 	End Sub
 
