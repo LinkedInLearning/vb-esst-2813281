@@ -4,8 +4,10 @@ Class MainWindow
 
 
 	Private Sub InitializeList(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+
 		Dim colorNames As New List(Of String)
 		Dim colorNames2 = New List(Of String)
+
 	End Sub
 
 	Private Sub ListOfStringsDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
