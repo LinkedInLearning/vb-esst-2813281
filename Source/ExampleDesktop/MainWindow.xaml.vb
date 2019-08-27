@@ -37,7 +37,7 @@ Class MainWindow
 
 	Private Sub BindingDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
 		Dim compassPoints As New List(Of String)({"North", "East", "South", "West"})
-		OutputList.ItemsSource = compassPoints
+
 	End Sub
 
 	Public Sub OutputToScreen(message As String)
