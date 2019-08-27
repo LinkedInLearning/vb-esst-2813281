@@ -48,22 +48,7 @@ Class MainWindow
 
 	End Sub
 
-	Private Sub OtherDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
-		Dim oddNumbers = GetOddNumbersList(15)
 
-		Dim oddStrings = oddNumbers.ConvertAll(Of String)(Function(x) Integer.Parse(x))
-
-		For Each number In oddNumbers
-			OriginalList.Items.Add(number)
-
-		Next
-		oddNumbers.Sort()
-
-		For Each number In oddStrings
-			ModifiedList.Items.Add(number)
-
-		Next
-	End Sub
 
 	Private Sub FindDemo(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
 		Dim oddNumbers = GetOddNumbersList(100)
