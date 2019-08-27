@@ -2,9 +2,6 @@
 
 Class MainWindow
 
-
-
-
 	Private Sub ListOfStringsDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 
 		Dim colorNames As New List(Of String)
@@ -17,9 +14,7 @@ Class MainWindow
 		' Use For Each to loop through a collection
 
 
-
 	End Sub
-
 
 	Private Sub ListOfIntegersDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
