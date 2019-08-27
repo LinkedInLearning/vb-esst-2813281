@@ -2,16 +2,7 @@
 
 Class MainWindow
 
-
-
-
 	Private Sub EnumerableDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
-
-		' LINQ provides tools for querying lists of data 
-		' The Enumerable class is key to query actions.
-
-
-		' get a range of integers
 
 		Dim numbers = New List(Of Integer)({2, 4, 5, 6, 8, 20, 35, 50, 65, 89})
 
@@ -25,8 +16,6 @@ Class MainWindow
 		OriginalList.Items.Add($"Total: {total}")
 		OriginalList.Items.Add($"Average: {average}")
 		OriginalList.Items.Add($"Average of four values: {newAverage}")
-
-
 
 	End Sub
 
