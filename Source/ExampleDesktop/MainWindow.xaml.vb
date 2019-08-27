@@ -2,28 +2,23 @@
 
 Class MainWindow
 
-
 	Private _ran As Random = New Random
-	Private _doubleSet As SortedSet(Of Double) = New SortedSet(Of Double)
+	Private _sortedSet As SortedSet(Of Double) = New SortedSet(Of Double)
 	Private _queueOfInts As Queue(Of Integer) = New Queue(Of Integer)
 	Private Sub SortedSetDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 
-		_doubleSet = New Collections.Generic.SortedSet(Of Double)({3.3, 1.1, 4.4, 2.2, 5.5, 9.9, 8.8, 7.7, 6.6})
-		OriginalList.ItemsSource = _doubleSet
-
-
-
+		_sortedSet = New Collections.Generic.SortedSet(Of Double)({3.3, 1.1, 4.4, 2.2, 5.5, 9.9, 8.8, 7.7, 6.6})
+		OriginalList.ItemsSource = _sortedSet
 
 	End Sub
-
 
 	Private Sub WhereDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 		Clear()
 		Dim newDouble = _ran.NextDouble() * 10
 		newDouble = Math.Round(newDouble, 2)
-		_doubleSet.Add(newDouble)
+		_sortedSet.Add(newDouble)
 
-		OriginalList.ItemsSource = _doubleSet
+		OriginalList.ItemsSource = _sortedSet
 
 	End Sub
 
