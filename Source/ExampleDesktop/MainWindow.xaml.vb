@@ -28,7 +28,7 @@ Class MainWindow
 
 		' use the Enumerable extension methods with any class
 		' that implements the IEnumerable or IEnumerable (Of T) interface
-		doubleList.
+
 
 	End Sub
 
