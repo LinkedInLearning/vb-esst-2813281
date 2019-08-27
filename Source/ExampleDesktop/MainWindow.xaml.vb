@@ -11,9 +11,12 @@ Class MainWindow
 		colorNames.Insert(0, "Blue")
 		colorNames.AddRange({"Green", "Lavender"})
 
+		' Use For to loop through a collection
+		For counter = 0 To colorNames.Count
+			OutputList.Items.Add(colorNames(counter))
+		Next
+
 		' Use For Each to loop through a collection
-
-
 	End Sub
 
 	Private Sub ListOfIntegersDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
