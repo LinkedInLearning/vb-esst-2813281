@@ -60,7 +60,6 @@ Class MainWindow
 			OriginalList.Items.Add(number)
 
 		Next
-		oddNumbers.Sort()
 
 		For Each number In foundNumbers
 			ModifiedList.Items.Add(number)
