@@ -12,8 +12,8 @@ Class MainWindow
 		colorNames.AddRange({"Green", "Lavender"})
 
 		' Use For to loop through a collection
-		For counter = 0 To colorNames.Count
-			OutputList.Items.Add(colorNames(counter))
+		For counter = 0 To colorNames.Count - 1
+			OutputList.Items.Add(colorNames.Item(counter))
 		Next
 
 		' Use For Each to loop through a collection
