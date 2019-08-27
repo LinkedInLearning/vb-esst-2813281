@@ -3,62 +3,44 @@
 Class MainWindow
 
 
+	Private _ran As Random = New Random
+	Dim _stopPositions As New List(Of Integer)
+
+	Private Sub DrawMarbles(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+		Dim marbles = New List(Of String)
+		marbles.AddRange(GetMarbles(50, "R"))
+		marbles.AddRange(GetMarbles(50, "B"))
+		marbles.AddRange(GetMarbles(1, "0"))
+
+		Dim bCount As Integer
+		Dim rCount As Integer
+
+		marbles = marbles.OrderBy(Function(x) _ran.Next).ToList
+		For Each marble In marbles
+			If marble = "R" Then
+				rCount += 1
+			ElseIf marble = "B" Then
+				bCount += 1
+
+			Else
+				Exit For
+			End If
+		Next
+		BlueMarbleListBox.Items.Add(bCount)
+		RedMarbleListBox.Items.Add(rCount)
+		_stopPositions.Add(bCount + rCount)
+		FarthestPositionListBox.Items.Add(_stopPositions.Average())
+	End Sub
 
 
-	Private Sub EnumerableDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
-
-		' LINQ provides tools for querying lists of data 
-		' The Enumerable class is key to query actions.
+	Private Sub Do1000(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
 
-		' get a range of integers
 
-		Dim numbers = Enumerable.Range(100, 300).ToList()
-
-		' use Enumerable extension methods to query the numbers list
-
-		Dim total = numbers.Sum
-		OriginalList.Items.Add(total)
 
 	End Sub
 
 
-	Private Sub WhereDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
-
-		' where
-		Dim integerList = Enumerable.Range(1, 300).ToList()
-
-		Dim listOf25s = integerList.Where(Function(x) x Mod 25 = 0 Or x < 10)
-
-		OriginalList.ItemsSource = integerList
-		ModifiedList.ItemsSource = listOf25s
-
-
-	End Sub
-
-	Private Sub OrderByDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
-
-
-		Dim words = New List(Of String)({"aa-5-aa", "bb-1-bb", "rr-6-rr", "zz-3-zz"})
-		Dim orderedWords = words.OrderBy(Of String)(Function(x) x.Chars(3))
-
-
-		OriginalList.ItemsSource = words
-		ModifiedList.ItemsSource = orderedWords
-
-	End Sub
-
-	Private Sub FindDemo(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
-		Dim doubleList = New List(Of Double)({3.3, 4.4, 1.1, 2.2, 5.5, 8.8, 9.9, 6.6, 7.7})
-		Dim lastNumber = doubleList.Last()
-
-		Dim maxValue = doubleList.Max
-
-		OriginalList.ItemsSource = doubleList
-		ModifiedList.Items.Add($"last number in list: {lastNumber}")
-		ModifiedList.Items.Add($"Highest number in list: {maxValue}")
-
-	End Sub
 
 #Region "Output"
 	Public Sub OutputToScreen(message As String)
@@ -70,11 +52,13 @@ Class MainWindow
 	End Sub
 
 	Private Sub Clear()
-		ModifiedList.ItemsSource = Nothing
-		ModifiedList.Items.Clear()
+		BlueMarbleListBox.ItemsSource = Nothing
+		BlueMarbleListBox.Items.Clear()
 
-		OriginalList.ItemsSource = Nothing
-		OriginalList.Items.Clear()
+		RedMarbleListBox.ItemsSource = Nothing
+		RedMarbleListBox.Items.Clear()
+		FarthestPositionListBox.ItemsSource = Nothing
+		FarthestPositionListBox.Items.Clear()
 
 	End Sub
 

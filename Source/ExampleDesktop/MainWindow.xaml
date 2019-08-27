@@ -45,14 +45,10 @@
 											DockPanel.Dock="Bottom"
 											HorizontalAlignment="Center">
 						<Button x:Name="ButtonA"
-										Content="Enumerable class" />
+										Content="Draw Marbles" />
 						
 						<Button x:Name="ButtonB"
-										Content="Where" />
-						<Button x:Name="ButtonC"
-										Content="OrderBy" />
-						<Button x:Name="ButtonD"
-										Content="Number" />
+										Content="Do 1000" />
 					</StackPanel>
 					<StackPanel Orientation='Horizontal'
 											DockPanel.Dock="Top"
@@ -67,15 +63,21 @@
 							<Grid.ColumnDefinitions>
 								<ColumnDefinition Width='1*' />
 								<ColumnDefinition Width='1*' />
+								<ColumnDefinition Width='1*' />
 							</Grid.ColumnDefinitions>
-							<ListBox x:Name='OriginalList'
+							<ListBox x:Name='BlueMarbleListBox'
 											 HorizontalAlignment="Stretch"
 											 Margin="10"
 											 VerticalAlignment="Stretch"></ListBox>
-							<ListBox x:Name='ModifiedList'
+							<ListBox x:Name='RedMarbleListBox'
 											 HorizontalAlignment="Stretch"
 											 Margin="10"
 											 VerticalAlignment="Stretch" Grid.Column='1'></ListBox>
+							<ListBox x:Name='FarthestPositionListBox'
+											 HorizontalAlignment="Stretch"
+											 Margin="10"
+											 VerticalAlignment="Stretch"
+											 Grid.Column='2'></ListBox>
 
 						</Grid>
 					</Grid>
