@@ -48,11 +48,7 @@
 										Content="Enumerable class" />
 						
 						<Button x:Name="ButtonB"
-										Content="Where" />
-						<Button x:Name="ButtonC"
-										Content="OrderBy" />
-						<Button x:Name="ButtonD"
-										Content="Number" />
+										Content="Extension Methods" />
 					</StackPanel>
 					<StackPanel Orientation='Horizontal'
 											DockPanel.Dock="Top"
