@@ -12,7 +12,7 @@ Class MainWindow
 
 	End Sub
 
-	Private Sub WhereDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
+	Private Sub AddDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 		Clear()
 		Dim newDouble = _ran.NextDouble() * 10
 		newDouble = Math.Round(newDouble, 2)
