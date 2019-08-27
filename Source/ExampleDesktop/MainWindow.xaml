@@ -49,8 +49,6 @@
 						
 						<Button x:Name="ButtonB"
 										Content="Sort" />
-						<Button x:Name="ButtonC"
-										Content="Convert" />
 						<Button x:Name="ButtonD"
 										Content="FindAll" />
 					</StackPanel>
