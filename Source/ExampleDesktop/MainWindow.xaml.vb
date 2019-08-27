@@ -9,13 +9,13 @@ Class MainWindow
 		' use Enumerable extension methods to query the numbers list
 
 		Dim total As Integer
-		Dim average As Integer
-		Dim newAverage As Integer
+		Dim average As Double
+		Dim subsetAverage As Double
 
 		OriginalList.Items.Add("Integers : 2, 4, 5, 6, 8, 20, 35, 50, 65, 89")
 		OriginalList.Items.Add($"Total: {total}")
 		OriginalList.Items.Add($"Average: {average}")
-		OriginalList.Items.Add($"Average of four values: {newAverage}")
+		OriginalList.Items.Add($"Average of four values: {subsetAverage}")
 
 	End Sub
 
