@@ -13,7 +13,7 @@ Class MainWindow
 
 		' get a range of integers
 
-		Dim numbers = Enumerable.Range(100, 300).ToList()
+		Dim numbers = Enumerable.Range(start:=20, count:=300).ToList()
 
 
 
@@ -28,6 +28,7 @@ Class MainWindow
 
 		' use the Enumerable extension methods with any class
 		' that implements the IEnumerable or IEnumerable (Of T) interface
+		doubleList.
 
 	End Sub
 
