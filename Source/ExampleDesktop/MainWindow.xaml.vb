@@ -13,12 +13,20 @@ Class MainWindow
 
 		' get a range of integers
 
-		Dim numbers = Enumerable.Range(100, 300).ToList()
+		Dim numbers = New List(Of Integer)({2, 4, 5, 6, 8, 20, 35, 50, 65, 89})
 
 		' use Enumerable extension methods to query the numbers list
 
-		Dim total = numbers.Sum
-		OriginalList.Items.Add(total)
+		Dim total As Integer
+		Dim average As Integer
+		Dim newAverage As Integer
+
+		OriginalList.Items.Add("Integers : 2, 4, 5, 6, 8, 20, 35, 50, 65, 89")
+		OriginalList.Items.Add($"Total: {total}")
+		OriginalList.Items.Add($"Average: {average}")
+		OriginalList.Items.Add($"Average of four values: {newAverage}")
+
+
 
 	End Sub
 
@@ -28,10 +36,10 @@ Class MainWindow
 		' where
 		Dim integerList = Enumerable.Range(1, 300).ToList()
 
-		Dim listOf25s = integerList.Where(Function(x) x Mod 25 = 0 Or x < 10)
+
 
 		OriginalList.ItemsSource = integerList
-		ModifiedList.ItemsSource = listOf25s
+		' ModifiedList.ItemsSource = listOf25s
 
 
 	End Sub
@@ -40,23 +48,21 @@ Class MainWindow
 
 
 		Dim words = New List(Of String)({"aa-5-aa", "bb-1-bb", "rr-6-rr", "zz-3-zz"})
-		Dim orderedWords = words.OrderBy(Of String)(Function(x) x.Chars(3))
+
 
 
 		OriginalList.ItemsSource = words
-		ModifiedList.ItemsSource = orderedWords
+		'	ModifiedList.ItemsSource = orderedWords
 
 	End Sub
 
 	Private Sub FindDemo(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
 		Dim doubleList = New List(Of Double)({3.3, 4.4, 1.1, 2.2, 5.5, 8.8, 9.9, 6.6, 7.7})
-		Dim lastNumber = doubleList.Last()
 
-		Dim maxValue = doubleList.Max
 
 		OriginalList.ItemsSource = doubleList
-		ModifiedList.Items.Add($"last number in list: {lastNumber}")
-		ModifiedList.Items.Add($"Highest number in list: {maxValue}")
+		'ModifiedList.Items.Add($"Last number in list: {lastNumber}")
+		'ModifiedList.Items.Add($"Highest number in list: {maxValue}")
 
 	End Sub
 
