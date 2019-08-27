@@ -33,7 +33,7 @@
 						 Background="#FFECF7FF"
 						 LastChildFill="True">
 		<TabControl>
-			<TabItem Header='Linq'>
+			<TabItem Header='Challenge: Marble Draw'>
 				<DockPanel>
 					<StackPanel Orientation="Horizontal"
 											DockPanel.Dock="Bottom"
@@ -61,24 +61,54 @@
 						</Grid.ColumnDefinitions>
 						<Grid>
 							<Grid.ColumnDefinitions>
-								<ColumnDefinition Width='1*' />
-								<ColumnDefinition Width='1*' />
+								<ColumnDefinition Width='2*' />
+								<ColumnDefinition Width='2*' />
+								<ColumnDefinition Width='2*' />
 								<ColumnDefinition Width='1*' />
 							</Grid.ColumnDefinitions>
-							<ListBox x:Name='BlueMarbleListBox'
-											 HorizontalAlignment="Stretch"
-											 Margin="10"
-											 VerticalAlignment="Stretch"></ListBox>
-							<ListBox x:Name='RedMarbleListBox'
-											 HorizontalAlignment="Stretch"
-											 Margin="10"
-											 VerticalAlignment="Stretch" Grid.Column='1'></ListBox>
-							<ListBox x:Name='FarthestPositionListBox'
-											 HorizontalAlignment="Stretch"
-											 Margin="10"
-											 VerticalAlignment="Stretch"
-											 Grid.Column='2'></ListBox>
+							<StackPanel>
+								<TextBlock Text='Blue' />
+								<Border  BorderBrush='SteelBlue'
+												 BorderThickness='3'
+												 Margin='10'>
+									<ListBox x:Name='BlueMarbleListBox'
+													
+													 HorizontalAlignment="Stretch"
+													
+													 VerticalAlignment="Stretch"
+													 Height='500' />
+								</Border>
+							</StackPanel>
+							<StackPanel  Grid.Column='1'>
+								<TextBlock Text='Red' />
+								<Border  BorderBrush='Red'
+												 BorderThickness='3'
+												 Margin='10'>
+									<ListBox x:Name='RedMarbleListBox'
+													 HorizontalAlignment="Stretch"
+													 Margin="0"
+													 VerticalAlignment="Stretch"
+													 Height='500'></ListBox>
+								</Border>
+							</StackPanel>
 
+							<StackPanel Grid.Column='2'>
+								<TextBlock Text='Farthest' />
+								<Border  BorderBrush='Gold'
+												 BorderThickness='3'
+												 Margin='10'>
+									<ListBox x:Name='FarthestPositionListBox'
+													 HorizontalAlignment="Stretch"
+													 
+													 VerticalAlignment="Stretch"
+													 Height='500' />
+								</Border>
+							</StackPanel>
+							<StackPanel  Grid.Column='3'>
+								<TextBlock Text='Average' />
+								<TextBlock Text='0'
+													 x:Name='AverageTextBlock' Margin='10' />
+							</StackPanel>
 						</Grid>
 					</Grid>
 				</DockPanel>

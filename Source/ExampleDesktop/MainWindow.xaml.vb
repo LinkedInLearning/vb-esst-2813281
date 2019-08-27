@@ -7,6 +7,10 @@ Class MainWindow
 	Dim _stopPositions As New List(Of Integer)
 
 	Private Sub DrawMarbles(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+		DrawMarble()
+	End Sub
+
+	Private Sub DrawMarble()
 		Dim marbles = New List(Of String)
 		marbles.AddRange(GetMarbles(50, "R"))
 		marbles.AddRange(GetMarbles(50, "B"))
@@ -26,15 +30,17 @@ Class MainWindow
 				Exit For
 			End If
 		Next
-		BlueMarbleListBox.Items.Add(bCount)
-		RedMarbleListBox.Items.Add(rCount)
-		_stopPositions.Add(bCount + rCount)
-		FarthestPositionListBox.Items.Add(_stopPositions.Average())
+		BlueMarbleListBox.Items.Insert(0, bCount)
+		RedMarbleListBox.Items.Insert(0, rCount)
+		_stopPositions.Insert(0, bCount + rCount)
+		FarthestPositionListBox.Items.Insert(0, bCount + rCount)
+		AverageTextBlock.Text = _stopPositions.Average
 	End Sub
 
-
 	Private Sub Do1000(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
-
+		For index = 1 To 1000
+			DrawMarble()
+		Next
 
 
 
