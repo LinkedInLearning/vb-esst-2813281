@@ -24,7 +24,7 @@ Class MainWindow
 
 
 		Dim compassPoints As New List(Of String)({"North", "East", "South", "West"})
-		Dim doubleList = New List(Of Double)({3.3, 4.4, 1.1, 2.2, 5.5, 8.8, 9.9, 6.6, 7.7})
+		Dim smallNumbers = New List(Of Double)({3.3, 4.4, 1.1, 2.2, 5.5, 8.8, 9.9, 6.6, 7.7})
 
 		' use the Enumerable extension methods with any class
 		' that implements the IEnumerable or IEnumerable (Of T) interface
