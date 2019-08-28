@@ -10,7 +10,7 @@ Class MainWindow
 #End Region
 
 	Private _ran As Random = New Random
-	Dim _stopPositions As New List(Of Integer)
+	Dim _farthestPositions As New List(Of Integer)
 
 	Private Sub CodeTips()
 		' a quick way to randomize a list of items.
@@ -56,9 +56,9 @@ Class MainWindow
 		Next
 		BlueMarbleListBox.Items.Insert(0, blueCount)
 		RedMarbleListBox.Items.Insert(0, redCount)
-		_stopPositions.Insert(0, blueCount + redCount + 1)
+		_farthestPositions.Insert(0, blueCount + redCount + 1)
 		FarthestPositionListBox.Items.Insert(0, blueCount + redCount + 1)
-		AverageTextBlock.Text = _stopPositions.Average
+		AverageTextBlock.Text = _farthestPositions.Average
 	End Sub
 
 
