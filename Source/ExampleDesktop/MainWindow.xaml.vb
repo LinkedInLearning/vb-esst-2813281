@@ -22,7 +22,7 @@ Class MainWindow
 	End Sub
 	Private Sub DrawMarbles(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 		DrawMarble()
-		CodeTips()
+
 	End Sub
 	Private Sub Do1000(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 		For index = 1 To 1000
@@ -52,8 +52,8 @@ Class MainWindow
 		Next
 		BlueMarbleListBox.Items.Insert(0, blueCount)
 		RedMarbleListBox.Items.Insert(0, redCount)
-		_stopPositions.Insert(0, blueCount + redCount)
-		FarthestPositionListBox.Items.Insert(0, blueCount + redCount)
+		_stopPositions.Insert(0, blueCount + redCount + 1)
+		FarthestPositionListBox.Items.Insert(0, blueCount + redCount + 1)
 		AverageTextBlock.Text = _stopPositions.Average
 	End Sub
 
