@@ -31,18 +31,22 @@ Class MainWindow
 
 	End Sub
 	Private Sub DrawMarble()
-		Dim marbles = New List(Of String)
-		marbles.AddRange(GetMarbles(50, "R"))
-		marbles.AddRange(GetMarbles(50, "B"))
-		marbles.AddRange(GetMarbles(1, "0"))
+		Dim goldenBucket = New List(Of String)
+		goldenBucket.AddRange(GetMarbles(50, "R"))
+		goldenBucket.AddRange(GetMarbles(50, "B"))
+		goldenBucket.AddRange(GetMarbles(1, "G"))
+		'Dim blueBucket = New List(Of String)
+		'Dim redBucket = New List(Of String)
 
 		Dim blueCount As Integer
 		Dim redCount As Integer
 
-		marbles = marbles.OrderBy(Function(x) _ran.Next).ToList
-		For Each marble In marbles
+		goldenBucket = goldenBucket.OrderBy(Function(x) _ran.Next).ToList
+		For Each marble In goldenBucket
 			If marble = "R" Then
 				redCount += 1
+				'redBucket.Add(marble)
+				'Dim count = redBucket.Count
 			ElseIf marble = "B" Then
 				blueCount += 1
 
