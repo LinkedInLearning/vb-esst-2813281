@@ -10,7 +10,7 @@ Class MainWindow
 #End Region
 
 	Private _ran As Random = New Random
-	Dim _stopPositions As New List(Of Integer)
+
 
 	Private Sub CodeTips()
 		' a quick way to randomize a list of items.
@@ -21,41 +21,13 @@ Class MainWindow
 		BlueMarbleListBox.Items.Insert(0, "example")
 	End Sub
 	Private Sub DrawMarbles(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
-		DrawMarble()
-		CodeTips()
+
 	End Sub
 	Private Sub Do1000(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
-		For index = 1 To 1000
-			DrawMarble()
-		Next
+
 
 	End Sub
-	Private Sub DrawMarble()
-		Dim marbles = New List(Of String)
-		marbles.AddRange(GetMarbles(50, "R"))
-		marbles.AddRange(GetMarbles(50, "B"))
-		marbles.AddRange(GetMarbles(1, "0"))
 
-		Dim blueCount As Integer
-		Dim redCount As Integer
-
-		marbles = marbles.OrderBy(Function(x) _ran.Next).ToList
-		For Each marble In marbles
-			If marble = "R" Then
-				redCount += 1
-			ElseIf marble = "B" Then
-				blueCount += 1
-
-			Else
-				Exit For
-			End If
-		Next
-		BlueMarbleListBox.Items.Insert(0, blueCount)
-		RedMarbleListBox.Items.Insert(0, redCount)
-		_stopPositions.Insert(0, blueCount + redCount)
-		FarthestPositionListBox.Items.Insert(0, blueCount + redCount)
-		AverageTextBlock.Text = _stopPositions.Average
-	End Sub
 
 
 
