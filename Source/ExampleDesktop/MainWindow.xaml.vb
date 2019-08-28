@@ -20,7 +20,7 @@ Class MainWindow
 		' add an item to the top of a ListBox with .Insert ()
 		BlueMarbleListBox.Items.Insert(0, "example")
 	End Sub
-	Private Sub DrawMarbles(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+	Private Sub PlayARound(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 
 	End Sub
 	Private Sub Do1000(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click

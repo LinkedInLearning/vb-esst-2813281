@@ -45,7 +45,7 @@
 											DockPanel.Dock="Bottom"
 											HorizontalAlignment="Center">
 						<Button x:Name="ButtonA"
-										Content="Draw Marbles" />
+										Content="Play a Round" />
 						
 						<Button x:Name="ButtonB"
 										Content="Do 1000" />
