@@ -3,19 +3,19 @@
 Class MainWindow
 
 	Private Sub FileOpen(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
-		FileATextBox.Text = ErrorMaker.OpenFile(System.AppDomain.CurrentDomain.BaseDirectory & "\example.txt")
+		FileBTextBox.Text = ErrorMaker.OpenFile("c:\nofile.txt")
 
 	End Sub
 
 	Private Sub FileException(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
-
 		FileBTextBox.Text = ErrorMaker.OpenFile("c:\nofile.txt")
+
 
 	End Sub
 
 	Private Sub DivisionException(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
-
+		FileBTextBox.Text = ErrorMaker.OpenFile("c:\nofile.txt")
 		Dim result = ErrorMaker.WorkWithNumbers(7)
 
 	End Sub

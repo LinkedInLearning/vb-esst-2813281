@@ -45,12 +45,12 @@
 											DockPanel.Dock="Bottom"
 											HorizontalAlignment="Center">
 						<Button x:Name="ButtonA"
-										Content="Open File" />
+										Content="Simple Catch" />
 						
 						<Button x:Name="ButtonB"
-										Content="Open file exception " />
+										Content="Use Exception class" />
 						<Button x:Name="ButtonC"
-										Content="Division exception" />
+										Content="Use Multiple Catch" />
 					</StackPanel>
 					<StackPanel Orientation='Horizontal'
 											DockPanel.Dock="Top"
