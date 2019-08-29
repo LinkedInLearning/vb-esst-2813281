@@ -5,38 +5,27 @@ Class MainWindow
 
 
 
-	Private Sub EnumerableDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+	Private Sub FileOpen(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 		FileATextBox.Text = ErrorMaker.OpenFile(System.AppDomain.CurrentDomain.BaseDirectory & "\example.txt")
-		FileATextBox.Text = ErrorMaker.OpenFile("c:\nofile.txt")
+
 
 	End Sub
 
 
-	Private Sub HandledDemo1(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
+	Private Sub FileException(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
 
-		Try
-
-		Catch ex As Exception
-			MessageBox.Show("Cannot find the file requested,  select another file and try again.")
-		End Try
+		FileBTextBox.Text = ErrorMaker.OpenFile("c:\nofile.txt")
 
 	End Sub
 
-	Private Sub OrderByDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+	Private Sub DivisionException(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+
+		Dim result = ErrorMaker.WorkWithNumbers(7)
+
+	End Sub
+
 	
-		Dim result = ErrorMaker.WorkWithNumbers (7)
-
-	End Sub
-
-	Private Sub FindDemo(sender As Object, e As RoutedEventArgs) Handles ButtonD.Click
-
-		Try
-			Dim result = ErrorMaker.WorkWithNumbers (7)
-		Catch ex As Exception
-			MessageBox.Show("Cannot divide by zero,  select another number and try again.")
-		End Try
-	End Sub
 
 #Region "Output"
 	Public Sub OutputToScreen(message As String)

@@ -31,6 +31,6 @@
 	Public Function WorkWithNumbers (value As integer) As Integer
 		
 
-		return = value / 0
+		return  value / 0
 	End Function
 End Module

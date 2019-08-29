@@ -45,14 +45,12 @@
 											DockPanel.Dock="Bottom"
 											HorizontalAlignment="Center">
 						<Button x:Name="ButtonA"
-										Content="Unhandled File Error" />
+										Content="Open File" />
 						
 						<Button x:Name="ButtonB"
-										Content="Handled " />
+										Content="Open file exception " />
 						<Button x:Name="ButtonC"
-										Content="Unhandled Division error" />
-						<Button x:Name="ButtonD"
-										Content="Handled" />
+										Content="Division exception" />
 					</StackPanel>
 					<StackPanel Orientation='Horizontal'
 											DockPanel.Dock="Top"
