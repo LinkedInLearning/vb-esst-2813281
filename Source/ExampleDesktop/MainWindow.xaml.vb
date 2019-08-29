@@ -35,17 +35,22 @@ Class MainWindow
 	Private Sub Catch3Demo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
 		Try
 			_counter += 1
+			Dim result As Integer = GetDataFromList (20)
 			FileATextBox.Text = _counter
 			FileBTextBox.Text = ErrorMaker.OpenFile("c:\nofile.txt")
-			Dim result = ErrorMaker.WorkWithNumbers(7)
+			 result = ErrorMaker.WorkWithNumbers(7)
 
 		Catch ex As System.IO.FileNotFoundException
 			MessageBox.Show($"Cannot access the file  { ex.FileName}")
 		Catch ex As OverflowException
 			MessageBox.Show($"This looks like a division error")
 		Catch ex As Exception
-			MessageBox.Show($"Something went wrong { ex.Message}")
-
+			
+			' this block if for unforeseen exceptions
+			' log the exception
+		'	My.Log.WriteException (ex)
+			My.Log.WriteException (ex,TraceEventType.Critical, "Add a custom log message/")
+				MessageBox.Show($"Something went wrong { ex.Message}")
 		End Try
 
 

@@ -30,9 +30,13 @@
 		End If
 	End Sub
 
-	Public Function WorkWithNumbers (value As integer) As Integer
-		
+	Public Function WorkWithNumbers(value As Integer) As Integer
 
-		return  value / 0
+
+		Return value / 0
+	End Function
+	Public Function GetDataFromList(index As Integer) As Integer
+		Dim numbers As New List(Of Integer)({5, 10, 15, 20, 25, 30, 35, 40, 45, 50})
+		Return numbers.Item(index)
 	End Function
 End Module
