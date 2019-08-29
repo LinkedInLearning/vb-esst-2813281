@@ -1,20 +1,30 @@
 ﻿Option Strict Off
 
 Class MainWindow
+	Dim _counter As Integer = 0
+	Private Sub Catch1Demo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 
-	Private Sub FileOpen(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+
+		_counter += 1
+		FileATextBox.Text = _counter
+		FileBTextBox.Text = ErrorMaker.OpenFile("c:\nofile.txt")
+
+
+
+
+	End Sub
+
+	Private Sub Catch2Demo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
+		_counter += 1
+		FileATextBox.Text = _counter
+
 		FileBTextBox.Text = ErrorMaker.OpenFile("c:\nofile.txt")
 
 	End Sub
 
-	Private Sub FileException(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
-
-		FileBTextBox.Text = ErrorMaker.OpenFile("c:\nofile.txt")
-
-
-	End Sub
-
-	Private Sub DivisionException(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+	Private Sub Catch3Demo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+		_counter += 1
+		FileATextBox.Text = _counter
 		FileBTextBox.Text = ErrorMaker.OpenFile("c:\nofile.txt")
 		Dim result = ErrorMaker.WorkWithNumbers(7)
 
