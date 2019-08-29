@@ -23,10 +23,12 @@ Class MainWindow
 	End Sub
 
 	Private Sub Catch3Demo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+
+		Dim result = ErrorMaker.WorkWithNumbers(7)
 		_counter += 1
 		FileATextBox.Text = _counter
 		FileBTextBox.Text = ErrorMaker.OpenFile("c:\nofile.txt")
-		Dim result = ErrorMaker.WorkWithNumbers(7)
+
 
 	End Sub
 
