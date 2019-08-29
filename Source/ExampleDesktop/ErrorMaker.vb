@@ -4,7 +4,8 @@
 
 
 		' Open the text file and display its contents.
-		Dim reader As System.IO.StreamReader = System.IO.File.OpenText(fileName)
+		Dim reader As System.IO.StreamReader
+		reader = System.IO.File.OpenText(fileName)
 
 		Dim content = reader.ReadToEnd()
 		reader.Close()
@@ -28,6 +29,7 @@
 			reader.Close()
 		End If
 	End Sub
+
 	Public Function WorkWithNumbers (value As integer) As Integer
 		
 

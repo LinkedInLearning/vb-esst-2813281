@@ -2,15 +2,10 @@
 
 Class MainWindow
 
-
-
-
 	Private Sub FileOpen(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 		FileATextBox.Text = ErrorMaker.OpenFile(System.AppDomain.CurrentDomain.BaseDirectory & "\example.txt")
 
-
 	End Sub
-
 
 	Private Sub FileException(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
@@ -24,8 +19,6 @@ Class MainWindow
 		Dim result = ErrorMaker.WorkWithNumbers(7)
 
 	End Sub
-
-	
 
 #Region "Output"
 	Public Sub OutputToScreen(message As String)
