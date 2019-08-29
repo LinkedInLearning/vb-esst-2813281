@@ -1,16 +1,17 @@
 ﻿Module ErrorMaker
 
-	Public Sub OpenFile(fileName As String)
+	Public Function OpenFile(fileName As String) As String
 
 
 		' Open the text file and display its contents.
-		Dim sr As System.IO.StreamReader =
-					System.IO.File.OpenText(fileName)
+		Dim reader As System.IO.StreamReader = System.IO.File.OpenText(fileName)
 
-		Dim content = sr.ReadToEnd()
+		Dim content = reader.ReadToEnd()
+		reader.Close()
 
+		Return content
 
-	End Sub
+	End Function
 
 
 	Public Sub OpenFileWithGuard(fileName As String)
@@ -19,12 +20,17 @@
 			Console.Write("File Not Found: " & fileName)
 		Else
 			' Open the text file and display its contents.
-			Dim sr As System.IO.StreamReader =
+			Dim reader As System.IO.StreamReader =
 					System.IO.File.OpenText(fileName)
 
-			Console.Write(sr.ReadToEnd)
+			Console.Write(reader.ReadToEnd)
 
-			sr.Close()
+			reader.Close()
 		End If
 	End Sub
+	Public Function WorkWithNumbers (value As integer) As Integer
+		
+
+		return = value / 0
+	End Function
 End Module

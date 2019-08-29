@@ -68,14 +68,14 @@
 								<ColumnDefinition Width='1*' />
 								<ColumnDefinition Width='1*' />
 							</Grid.ColumnDefinitions>
-							<ListBox x:Name='OriginalList'
+							<TextBox x:Name='FileATextBox'
 											 HorizontalAlignment="Stretch"
 											 Margin="10"
-											 VerticalAlignment="Stretch"></ListBox>
-							<ListBox x:Name='ModifiedList'
+											 VerticalAlignment="Stretch"></TextBox>
+							<TextBox x:Name='FileBTextBox'
 											 HorizontalAlignment="Stretch"
 											 Margin="10"
-											 VerticalAlignment="Stretch" Grid.Column='1'></ListBox>
+											 VerticalAlignment="Stretch" Grid.Column='1' IsReadOnly='True'></TextBox>
 
 						</Grid>
 					</Grid>
