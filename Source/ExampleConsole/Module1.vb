@@ -14,6 +14,8 @@
 	End Sub
 
 	Private Function PentagonalDotCounter(rings As Integer)
+		' 1 + 5 + 10 + 15 + 15
+		' 1 + (5 * 1) + (5 * 2) ... + (5 * n) 
 		Dim total = 1
 		For counter = rings - 1 To 1 Step -1
 			total += counter * 5
