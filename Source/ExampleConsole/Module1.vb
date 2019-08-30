@@ -5,7 +5,7 @@
 			Console.ResetColor()
 			Dim ringCount = Console.ReadLine()
 
-			Dim totalDots = GeneralizedDotCounter(rings:=ringCount)
+			Dim totalDots = PentagonalDotCounter(rings:=ringCount)
 			'	Dim totalDots = GeneralizedDotCounter(rings:=ringCount,dimensions:=4)
 			Console.ForegroundColor = ConsoleColor.Yellow
 			Console.WriteLine($"Ring Count: {ringCount}, Total Dots: {totalDots}")
