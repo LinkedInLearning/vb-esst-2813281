@@ -5,47 +5,46 @@ Class MainWindow
 
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 
+		AnswerTextBox.Text = ""
+		Dim searchWords = SearchWordTextBox.Text.ToLower
 
-		Dim startDate As Date
-		Dim interval As integer
-		If Date.TryParse(StartDateTextBox.Text, startDate) = False Then
-			OutputToScreen("Cannot parse the start date.")
-			Exit Sub
+		Dim results As String = ""
+		Dim found1, found2, foundAll As Boolean
+		found1 = String1Textbox.Text.ToLower.Contains(searchWords)
+		found2 = String2Textbox.Text.ToLower.Contains(searchWords)
+		foundAll = found1 And found2
+		If found1 Then
+			results &= $"(+)  '{searchWords}' found in first string {vbCrLf}"
+		Else
+			results &= $"(-)  '{searchWords}' not found in first string {vbCrLf}"
 		End If
-		If Integer.TryParse(IntervalTextBox.Text, interval) = False Then
 
-			OutputToScreen("Cannot parse the interval.")
-			Exit Sub
+		If found2 Then
+			results &= $"(+)  '{searchWords}' found in second string {vbCrLf}"
+			Else
+			results &= $"(-)  '{searchWords}' not found in second string {vbCrLf}"
 		End If
 
-		
-		OutputToScreen("Original Date: " + startDate.ToLongDateString)
-		OutputToScreen("Number of days and months to add: " + interval.ToString)
-		Dim newDate = startDate.AddDays(interval).AddMonths(interval)
-		OutputToScreen("Calculated End date: " + newDate.ToLongDateString)
+		If foundAll Then
+			results &= $"(++)'{searchWords}' found in both strings {vbCrLf}"
+		End If
+
+
+		AnswerTextBox.Text = results
+
+
 	End Sub
 
 
 
-	Sub OutputToScreen(message As String)
-		MessageTextBox.Text += message + vbCrLf
-	End Sub
-	Sub OutputBlankLine()
-		MessageTextBox.Text += vbCrLf
-	End Sub
 
 
-	Sub OutputLine()
-		MessageTextBox.Text += "-----------" + vbCrLf
-	End Sub
 
-	Private Sub Clear(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
-		Clear()
-	End Sub
 
-	Private Sub Clear()
-		MessageTextBox.Text = ""
-	End Sub
+
+
+
+
 
 
 End Class
