@@ -30,8 +30,6 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Right"
 								Margin='40,5'>
-			<Button x:Name="ButtonC"
-							Content="Date Methods" />
 			<Button x:Name="ClearButton"
 							Content="Clear" />
 		</StackPanel>
@@ -40,12 +38,8 @@
 								HorizontalAlignment="Right"
 								Margin='40,5'>
 			<Button x:Name="ButtonA"
-							Content="Date variables" />
-			<Button x:Name="ButtonD"
-							Content="Time variables" />
-			<Button x:Name="ButtonB"
-							Content="Formatting" />
-			
+							Content="Show results" />
+
 		</StackPanel>
 		
 		<StackPanel Orientation='Horizontal'
@@ -60,12 +54,12 @@
 							 Margin='10,0'
 							 Text="11-14-2025"
 							 VerticalAlignment="Stretch" />
-			<TextBlock Text='Enter End date:' />
-			<TextBox x:Name="EndDateTextBox"
+			<TextBlock Text='Enter Interval:' />
+			<TextBox x:Name="IntervalTextBox"
 							 HorizontalAlignment="Stretch"
 							 MinWidth='200'
 							 Margin='10,0'
-							 Text="11-23-2025"
+							 Text="5"
 							 VerticalAlignment="Stretch" />
 		</StackPanel>
 		<DockPanel DockPanel.Dock="Top"
