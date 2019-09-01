@@ -20,7 +20,7 @@ Class MainWindow
 
 		
 		OutputToScreen("Original Date: " + startDate.ToLongDateString)
-		OutputToScreen("Number of days and Months to add: " + interval.ToString)
+		OutputToScreen("Number of days and months to add: " + interval.ToString)
 		Dim newDate = startDate.AddDays(interval).AddMonths(interval)
 		OutputToScreen("Calculated End date: " + newDate.ToLongDateString)
 	End Sub
