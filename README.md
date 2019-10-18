@@ -1,6 +1,6 @@
 # Visual Basic Essential Training (REVISION 2019 Q4)
 ### VB-Esst-2813281
-This is the repository for the **LinkedIn Learning**  [Visual Basic Essential Training](#) course. The full course is available from [LinkedIn Learning](https://linkedin.com/learning/).
+This is the repository for the **LinkedIn Learning**  [Visual Basic Essential Training](https://www.linkedin.com/learning/visual-basic-essential-training-2/) course. The full course is available from [LinkedIn Learning](https://linkedin.com/learning/).
 
 ## What is Visual Basic?
 The Microsoft® Visual Basic® programming language is a high-level programming language for the Microsoft .NET Framework. Although it is designed to be an approachable and easy-to-learn language, it is also powerful enough to satisfy the needs of experienced programmers. The Visual Basic programming language has a syntax that is similar to English, which promotes the clarity and readability of Visual Basic code.
