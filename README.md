@@ -1,4 +1,4 @@
-# Visual Basic Essential Training (REVISION 2019 Q4)
+# Visual Basic Essential Training
 ### VB-Esst-2813281
 This is the repository for the **LinkedIn Learning**  [Visual Basic Essential Training](https://www.linkedin.com/learning/visual-basic-essential-training-2/) course. The full course is available from [LinkedIn Learning](https://linkedin.com/learning/).
 
@@ -7,7 +7,7 @@ The Microsoft® Visual Basic® programming language is a high-level programming 
 Wherever possible, meaningful words or phrases are used instead of abbreviations, acronyms, or special characters. 
 
 ## This course
-This course looks at the fundemental concepts that are part of the `Visual Basic` language. The courses uses Visual Studion 2019 and has course examples available in Console and Windows desktop formats.
+This course looks at the fundamental concepts that are part of the `Visual Basic` language. The courses uses Visual Studio 2019 and has course examples available in Console and Windows desktop formats.
 
 ## Branches
 The branches are structured to correspond to the videos in the course. The naming convention is `chapter#-video#`. As an example, the branch named `02-03` corresponds to the second chapter and the third video in that chapter.
