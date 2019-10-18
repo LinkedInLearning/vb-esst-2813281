@@ -49,10 +49,6 @@ Class MainWindow
 
 	End Sub
 
-	Private Sub RunCode3Button_Click(sender As Object, e As RoutedEventArgs) Handles RunCode3Button.Click
-
-
-	End Sub
 
 	Sub OutputToScreen(message As String)
 		MessageTextBox.Text += message + vbCrLf
