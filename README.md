@@ -1,6 +1,6 @@
-# Visual Basic Essential Training (REVISION 2019 Q4)
+# Visual Basic Essential Training
 ### VB-Esst-2813281
-This is the repository for the **LinkedIn Learning**  [Visual Basic Essential Training](#) course. The full course is available from [LinkedIn Learning](https://linkedin.com/learning/).
+This is the repository for the **LinkedIn Learning**  [Visual Basic Essential Training](https://www.linkedin.com/learning/visual-basic-essential-training-2/) course. The full course is available from [LinkedIn Learning](https://linkedin.com/learning/).
 
 ## Introduction
 Microsoft Visual Basic is a rich programming language that leverages every aspect of the .NET framework. With it you can write every type of application, from console apps to scalable web applications.  It works with Windows Forms, WPF and Universal Windows applications too.  In this course we’ll look at the fundamentals of Visual Basic.  First, we get comfortable with the language syntax and explore the Visual Studio code editors.  We’ll explore how to debug your code and write exception handlers Before you know it, we’ll be finishing up the course with logic statements and working with Lists and LINQ.
