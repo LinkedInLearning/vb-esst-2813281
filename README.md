@@ -25,4 +25,4 @@ When you are ready to [learn more about .NET](https://www.linkedin.com/learning/
 ## About the Instructor - Walt Ritscher
 Check out my [other courses](https://www.linkedin.com/learning/instructors/walt-ritscher) on LinkedIn Learning.  Follow me on [LinkedIn](https://www.linkedin.com/in/waltritscher/?trk=lil_course) and [Twitter](https://twitter.com/waltritscher). 
 
-![Walt Ritscher Headshot](https://media.licdn.com/dms/image/C4D03AQE8tjxoESjxoQ/profile-displayphoto-shrink_200_200/0?e=1570665600&v=beta&t=DvJhngxaoBLRxWjJKcuduzOdfen77TJX_EZggAQIWfY)
+![Walt Ritscher Headshot](https://1drv.ms/u/s!AjNFm5-Agip9y4pORD9pHVffziyZYw?e=4zn6MK)
